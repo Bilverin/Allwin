@@ -359,7 +359,6 @@ a.to-top {
 		}
 	}
 }
-
 // contacts
 .contacts {
 	ul {
@@ -372,6 +371,7 @@ a.to-top {
 			}
 			h3 {
 				color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
+				margin-bottom: 112px;
 			}
 			dl {
 				margin-bottom: 0;
@@ -383,12 +383,13 @@ a.to-top {
 					float: left;
 				}
 				dt {
-					color: #909090; font-family: $HNC-Roman; font-size: 14px; font-weight: 400;
+					color: #909090; font-family: $HNC-Roman; font-size: 14px; font-weight: 400; line-height: 29px;
 					width: 100px;
 				}
 				dd {
 					color: #333333; font-family: $HNC-Roman; font-size: 17px; letter-spacing: -0.07px; line-height: 29px;
-					width: calc(100% - 100px);
+					width: calc(100% - 100px); margin-bottom: 25px;
+					&:last-child {margin-bottom: 35px; margin-top: -10px;}
 					a {
 						color: #909090; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
 					}
@@ -404,11 +405,11 @@ a.to-top {
 	background-color: #3c3d41;
 	
 	p {
-		color:#ffffff; font-size: 12px; letter-spacing: 0.6px;
+		color:#ffffff; font-family: $HNC-Roman; font-size: 12px; letter-spacing: 0.6px;
 	}
 	h3 {
-		line-height: 0.6;
-		margin-top: 0; margin-bottom: 18px;
+		font-family: $HNC-Roman; line-height: 0.6;
+		margin-top: 0; margin-bottom: 10px; min-height: 26px;
 
 		a{
 			color: #ffffff; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
@@ -416,32 +417,37 @@ a.to-top {
 		}
 	}
 	.footer-devider {
-		margin: 42px 0 40px 0;
+		margin-bottom: 40px;
+		margin-top: 0;
 		border: 1px solid #f3f3f3;
 		opacity: 0.2;
 		
-		&:nth-of-type(2) {
-			margin-top: 0;
+		&:nth-of-type(1) {
+			margin-top: 52px;
+		}
+		&:nth-of-type(3) {
+			margin-top: 18px;
 		}
 	}
 
 	ul {
-		margin-bottom: 60px;
+		margin: 20px 0 55px;
 		li{
-			line-height: 32px;
-			a {
-				color: #ffffff; font-family: $HNC-Roman; font-size: 15px; letter-spacing: -0.07px; line-height: 16px;
+			margin-bottom: 10px;
+			a{
+				color: #ffffff; font-family: $HNC-Roman; font-size: 15px; letter-spacing: -0.07px;
 			}
+			&:last-child {margin-bottom: 0;}
 		}
 	}
 
 	.copyright {
 		position:relative; display: flex; justify-content: space-between;
 		small {
-			color: #909090; font-size: 14px;
+			color: #909090; font-family: $HNC-Roman; font-size: 14px;
 		}
 		ul.socials {
-			margin-bottom: 0;
+			margin: 0;
 
 			li {
 				display: inline-block; margin-left: 25px; margin-bottom: 0;
@@ -450,7 +456,6 @@ a.to-top {
 				}
 				a {
 					i {
-						color: #ffffff;
 						opacity: 0.5;
 					}
 				}
