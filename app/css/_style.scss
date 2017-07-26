@@ -5,11 +5,51 @@
 
 	.wr {
 		&-header {
-			position: relative; z-index: 5;
+			position: relative; z-index: 100; padding: 40px 0;
+		}
+
+		&-menu {
+			position: fixed; top: 0; left: 0; right: 0; bottom: 0;  z-index: 95;
+			pointer-events: none;
+			&:after {
+				content: '';
+				position: absolute; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%);
+				background: rgba(255,255,255,0.95);
+				transition: transform 0.3s linear;
+			}
+			&.active {
+				pointer-events: all;
+				&:after {
+					transform: translateX(0);
+				}
+			}
+			.container {
+				position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 5;
+			}
 		}
 
 		&-intro {
-			padding: 160px 0 280px;
+			padding: 130px 0 288px;
+		}
+
+		&-services {
+			padding-bottom: 200px;
+		}
+
+		&-advantages {
+			padding: 41px 0 59px;
+		}
+
+		&-about {
+			padding: 181px 0 159px;
+		}
+
+		&-testimonials {
+			padding: 76px 0 174px;
+		}
+
+		&-partners {
+			padding: 67px 0 400px;
 		}
 		
 		&-footer {
