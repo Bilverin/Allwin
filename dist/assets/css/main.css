@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8066,6 +8066,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   font-size: 31px;
   font-weight: 400;
   line-height: 36px;
+  letter-spacing: -0.25px;
   text-align: center; }
 
 .header {
@@ -8076,27 +8077,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 40px; }
+  justify-content: space-between; }
   .header a.logo {
     display: inline-block; }
     .header a.logo img {
       display: inline; }
   .header ul li {
     display: inline-block;
-    vertical-align: top;
-    margin-right: 47px; }
-    .header ul li:first-child {
-      padding-top: 8px; }
-    .header ul li:last-child {
-      margin-right: 0; }
-      .header ul li:last-child a {
-        height: 50px;
-        width: 50px; }
+    vertical-align: top; }
     .header ul li a {
       color: #343434;
       font-family: "HelveticaNeueCyr-Roman", sans-serif;
       font-size: 15px;
+      letter-spacing: -0.27px;
       line-height: 36px;
       text-transform: uppercase;
       display: block; }
@@ -8104,12 +8097,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0); }
-      .header ul li a:hover span em, .header ul li a:hover span b {
+      .header ul li a:hover span em {
         background: #ffffff; }
-      .header ul li a.active em {
-        opacity: 0; }
-      .header ul li a.active b {
-        opacity: 1; }
       .header ul li a span {
         display: inline-block;
         width: 50px;
@@ -8143,134 +8132,32 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           position: relative;
           z-index: 2;
           background: #606060;
-          -webkit-transition: background 0.3s ease-out, opacity 0.3s ease-out;
-          transition: background 0.3s ease-out, opacity 0.3s ease-out; }
-          .header ul li a span em:last-of-type {
+          -webkit-transition: background 0.3s ease-out;
+          transition: background 0.3s ease-out; }
+          .header ul li a span em:last-child {
             margin-bottom: 0; }
-        .header ul li a span b {
-          display: block;
-          width: 22px;
-          height: 1px;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          -ms-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-          z-index: 2;
-          background: #606060;
-          opacity: 0;
-          -webkit-transition: background 0.3s ease-out, opacity 0.3s ease-out;
-          transition: background 0.3s ease-out, opacity 0.3s ease-out; }
-          .header ul li a span b:last-of-type {
-            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-            -ms-transform: translate(-50%, -50%) rotate(-45deg);
-            transform: translate(-50%, -50%) rotate(-45deg); }
 
-.menu {
-  position: relative;
-  z-index: 5;
-  pointer-events: none;
-  opacity: 0; }
-  .menu.active {
-    pointer-events: all;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s 0.3s ease-out;
-    transition: opacity 0.3s 0.3s ease-out; }
-  .menu ul.navigation {
-    width: 500px;
-    margin: 0 auto 130px; }
-    .menu ul.navigation li a {
-      color: #333333;
-      font-family: "SFNS-Display", sans-serif;
-      font-size: 40px;
-      font-weight: 400;
-      line-height: 84px;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      text-align: center;
-      display: block;
-      width: 460px;
-      margin: 0 auto;
-      position: relative; }
-      .menu ul.navigation li a:hover:after {
-        width: 100%; }
-      .menu ul.navigation li a:after {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 12px;
-        left: 50%;
-        bottom: 0;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        background: #333333;
-        -webkit-transition: width 0.3s ease-out;
-        transition: width 0.3s ease-out; }
-  .menu ul.socials {
-    text-align: center;
-    margin-bottom: 0; }
-    .menu ul.socials li {
-      display: inline-block;
-      margin-left: 25px;
-      margin-bottom: 0; }
-      .menu ul.socials li:first-child {
-        margin-left: 0; }
-      .menu ul.socials li a {
-        display: block;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        -webkit-transition: background 0.2s ease-out;
-        transition: background 0.2s ease-out; }
-        .menu ul.socials li a i {
-          color: #3c3d41;
-          font-size: 14px;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          -webkit-transition: color 0.2s ease-out;
-          transition: color 0.2s ease-out; }
-        .menu ul.socials li a:hover.fb {
-          background: #3b5998; }
-        .menu ul.socials li a:hover.tw {
-          background: #34ccff; }
-        .menu ul.socials li a:hover.rss {
-          background: #fb7629; }
-        .menu ul.socials li a:hover.insta {
-          background: #a835b5; }
-        .menu ul.socials li a:hover.gp {
-          background: #d44132; }
-        .menu ul.socials li a:hover i {
-          color: #ffffff; }
+.intro h1 {
+  color: #343434;
+  font-family: "SFNS-Display", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.25px; }
 
-.intro {
-  padding: 0 40px; }
-  .intro h1 {
-    color: #343434;
-    font-family: "SFNS-Display", sans-serif;
-    font-size: 52px;
-    font-weight: 400;
-    line-height: 56px; }
-  .intro-img {
+.intro-img {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  .intro-img-1, .intro-img-2 {
     position: absolute;
     right: 0;
     bottom: 0; }
-    .intro-img-1, .intro-img-2 {
-      position: absolute;
-      right: 0;
-      bottom: 0; }
-      .intro-img-1 img, .intro-img-2 img {
-        display: block;
-        position: relative; }
-    .intro-img-2 {
-      background: #f3f3f3; }
+    .intro-img-1 img, .intro-img-2 img {
+      display: block;
+      position: relative; }
+  .intro-img-2 {
+    background: #f3f3f3; }
 
 .services ul {
   display: -webkit-box;
@@ -8294,10 +8181,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-weight: 400;
       line-height: 36px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.4px;
       position: absolute;
-      left: 66px;
-      top: 35px;
+      left: 50px;
+      top: 50px;
       margin: 0;
       z-index: 10;
       -webkit-transition: color 0.3s ease-out;
@@ -8329,64 +8216,47 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .services ul li img {
       position: relative; }
 
-.advantages {
-  padding-top: 59px; }
-  .advantages ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    .advantages ul li {
-      position: relative;
-      width: 33.33333%;
-      height: 334px;
-      background: #ffffff;
-      border-right: solid 1px #f3f3f3; }
-      .advantages ul li:last-child {
-        border: none; }
-      .advantages ul li p {
-        text-align: center;
-        margin: 0;
-        position: absolute;
-        left: 50%;
-        top: -webkit-calc(50% + 4px);
-        top: calc(50% + 4px);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
-        .advantages ul li p span {
-          color: #343434;
-          font-family: "HelveticaNeueCyr-Roman", sans-serif;
-          font-size: 17px;
-          line-height: 23px;
-          letter-spacing: -0.07px;
-          display: block;
-          margin-top: 29px; }
+.advantages ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .advantages ul li {
+    position: relative;
+    width: 33.33333%;
+    background: #ffffff;
+    border-right: solid 1px #f3f3f3; }
+    .advantages ul li:last-child {
+      border: none; }
+    .advantages ul li p {
+      text-align: center;
+      margin: 0; }
+      .advantages ul li p span {
+        color: #343434;
+        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: -0.07px;
+        display: block; }
 
-.about {
-  padding-left: 40px; }
-  .about h4 {
-    color: #333333;
-    font-family: "SFNS-Display", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    line-height: 23px; }
-  .about p {
-    color: #343434;
-    font-family: "HelveticaNeueCyr-Roman", sans-serif;
-    font-size: 17px;
-    letter-spacing: 0.14px;
-    line-height: 29px;
-    padding-left: 61px;
-    margin-bottom: 25px; }
-    .about p:last-child {
-      margin-bottom: 0; }
+.about h4 {
+  color: #333333;
+  font-family: "SFNS-Display", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.4px; }
+
+.about p {
+  color: #343434;
+  font-family: "HelveticaNeueCyr-Roman", sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.07px;
+  line-height: 29px; }
 
 .testimonials {
   position: relative;
-  padding: 234px 0 104px;
+  padding: 230px 0 100px;
   background: #ffffff; }
   .testimonials:before {
     content: '';
@@ -8413,25 +8283,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-size: 31px;
       font-weight: 400;
       line-height: 43px;
-      letter-spacing: -0.1px;
+      letter-spacing: -0.5px;
       text-align: center; }
-    .testimonials blockquote footer {
-      margin-top: 47px; }
-      .testimonials blockquote footer:before {
-        content: none; }
-      .testimonials blockquote footer cite p {
-        color: #333333;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
-        font-size: 12px;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        margin-bottom: 4px; }
-      .testimonials blockquote footer cite span {
-        color: #333333;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.2px; }
+    .testimonials blockquote footer cite p {
+      color: #333333;
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase; }
+    .testimonials blockquote footer cite span {
+      color: #333333;
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-size: 14px; }
 
 .contacts ul {
   display: -webkit-box;
@@ -8512,10 +8375,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       line-height: 32px; }
       .footer ul li a {
         color: #ffffff;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
         font-size: 15px;
-        letter-spacing: -0.07px;
-        line-height: 16px; }
+        letter-spacing: -0.07px; }
   .footer .copyright {
     position: relative;
     display: -webkit-box;
@@ -8532,9 +8393,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .footer .copyright ul.socials {
       margin-bottom: 0; }
       .footer .copyright ul.socials li {
+        line-height: initial;
         display: inline-block;
-        margin-left: 25px;
-        margin-bottom: 0; }
+        margin-left: 25px; }
         .footer .copyright ul.socials li:first-child {
           margin-left: 0; }
         .footer .copyright ul.socials li a i {
@@ -8548,54 +8409,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background: #f3f3f3; }
   .app .wr-header {
     position: relative;
-    z-index: 100;
-    padding: 40px 0; }
-  .app .wr-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 95;
-    pointer-events: none; }
-    .app .wr-menu:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-      background: rgba(255, 255, 255, 0.95);
-      -webkit-transition: -webkit-transform 0.3s linear;
-      transition: -webkit-transform 0.3s linear;
-      transition: transform 0.3s linear;
-      transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
-    .app .wr-menu.active {
-      pointer-events: all; }
-      .app .wr-menu.active:after {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0); }
-    .app .wr-menu .container {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      z-index: 5; }
+    z-index: 5; }
   .app .wr-intro {
-    padding: 130px 0 288px; }
-  .app .wr-services {
-    padding-bottom: 200px; }
-  .app .wr-advantages {
-    padding: 41px 0 59px; }
-  .app .wr-about {
-    padding: 181px 0 159px; }
-  .app .wr-testimonials {
-    padding: 76px 0 174px; }
-  .app .wr-partners {
-    padding: 67px 0 400px; }
+    padding: 160px 0 280px; }
