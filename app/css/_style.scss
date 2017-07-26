@@ -1,11 +1,15 @@
 .app {
-	min-width: 320px;
+	min-width: 320px; padding: 0 0 40px;
 	overflow-x: hidden;
-	background: #ffffff;
+	background: #f3f3f3;
 
 	.wr {
 		&-header {
-			
+			position: relative; z-index: 5;
+		}
+
+		&-intro {
+			padding: 160px 0 280px;
 		}
 		
 		&-footer {

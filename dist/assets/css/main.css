@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8018,9 +8018,22 @@ fieldset {
 .icon {
   display: inline-block; }
 
+@media all and (min-width: 1440px) {
+  .container {
+    width: 1390px; } }
+
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+.section-header h3 {
+  color: #343434;
+  font-family: "SFNS-Display", sans-serif;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  text-align: center; }
+
 .header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8097,27 +8110,111 @@ fieldset {
   line-height: 56px;
   letter-spacing: -0.25px; }
 
+.intro-img {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  .intro-img-1, .intro-img-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .intro-img-1 img, .intro-img-2 img {
+      display: block;
+      position: relative; }
+  .intro-img-2 {
+    background: #f3f3f3; }
+
+.services ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .services ul li {
+    width: 50%;
+    position: relative;
+    overflow: hidden; }
+    .services ul li:hover h2 {
+      color: #343434; }
+    .services ul li:hover div.info {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+    .services ul li h2 {
+      color: #ffffff;
+      font-family: "SFNS-Display", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 36px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      margin: 0;
+      z-index: 10;
+      -webkit-transition: color 0.3s ease-out;
+      transition: color 0.3s ease-out; }
+    .services ul li div.info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+      z-index: 5;
+      padding-top: 200px;
+      background: rgba(255, 255, 255, 0.8);
+      -webkit-transition: -webkit-transform 0.3s ease-out;
+      transition: -webkit-transform 0.3s ease-out;
+      transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+      .services ul li div.info a {
+        color: #343434;
+        font-family: "SFNS-Display", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px; }
+    .services ul li img {
+      position: relative; }
+
+.advantages ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .advantages ul li {
+    position: relative;
+    width: 33.33333%;
+    background: #ffffff;
+    border-right: solid 1px #f3f3f3; }
+    .advantages ul li:last-child {
+      border: none; }
+
 .footer {
-  background-color: #3c3d41;
-  padding: 60px 40px; }
+  padding: 60px 40px;
+  background-color: #3c3d41; }
   .footer p {
+    color: #ffffff;
     font-size: 12px;
-    color: #FFF;
     letter-spacing: 0.6px; }
   .footer h3 {
+    line-height: 0.6;
     margin-top: 0;
-    margin-bottom: 18px;
-    line-height: 0.6; }
+    margin-bottom: 18px; }
     .footer h3 a {
-      opacity: 0.2;
       color: #ffffff;
       font-size: 12px;
       letter-spacing: 1.2px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      opacity: 0.2; }
   .footer .footer-devider {
+    margin: 42px 0 40px 0;
     border: 1px solid #f3f3f3;
-    opacity: 0.2;
-    margin: 42px 0 40px 0; }
+    opacity: 0.2; }
     .footer .footer-devider:nth-of-type(2) {
       margin-top: 0; }
   .footer ul {
@@ -8129,22 +8226,37 @@ fieldset {
         font-size: 15px;
         letter-spacing: -0.07px; }
   .footer .copyright {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .footer .copyright small {
       color: #909090;
       font-size: 14px; }
-    .footer .copyright .socials {
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .footer .copyright .socials li {
+    .footer .copyright ul.socials {
+      margin-bottom: 0; }
+      .footer .copyright ul.socials li {
+        line-height: initial;
         display: inline-block;
         margin-left: 25px; }
-        .footer .copyright .socials li a i {
+        .footer .copyright ul.socials li:first-child {
+          margin-left: 0; }
+        .footer .copyright ul.socials li a i {
           color: #ffffff;
           opacity: 0.5; }
 
 .app {
   min-width: 320px;
+  padding: 0 0 40px;
   overflow-x: hidden;
-  background: #ffffff; }
+  background: #f3f3f3; }
+  .app .wr-header {
+    position: relative;
+    z-index: 5; }
+  .app .wr-intro {
+    padding: 160px 0 280px; }
