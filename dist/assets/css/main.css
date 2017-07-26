@@ -7934,9 +7934,8 @@ body {
     overflow: hidden; }
 
 /* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
-p {
-  margin-bottom: 20px;
-  /* для правильного вертикального ритма */ }
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0; }
 
 a {
   text-decoration: none; }
@@ -7969,6 +7968,42 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
+
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-car {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 64px;
+  height: 64px; }
+
+.icon-ring {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -64px;
+  width: 57px;
+  height: 65px; }
+
+.icon-target {
+  background-image: url(../img/sprite.png);
+  background-position: -64px 0px;
+  width: 65px;
+  height: 63px; }
 
 @font-face {
   font-family: SFNS-Display;
@@ -8193,6 +8228,123 @@ fieldset {
     border-right: solid 1px #f3f3f3; }
     .advantages ul li:last-child {
       border: none; }
+    .advantages ul li p {
+      text-align: center;
+      margin: 0; }
+      .advantages ul li p span {
+        color: #343434;
+        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: -0.07px;
+        display: block; }
+
+.about h4 {
+  color: #333333;
+  font-family: "SFNS-Display", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.4px; }
+
+.about p {
+  color: #343434;
+  font-family: "HelveticaNeueCyr-Roman", sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.07px;
+  line-height: 29px; }
+
+.testimonials {
+  position: relative;
+  padding: 230px 0 100px;
+  background: #ffffff; }
+  .testimonials:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../img/quotes.png") center center no-repeat; }
+  .testimonials blockquote {
+    font-size: inherit;
+    text-align: center;
+    width: 610px;
+    margin: 0 auto;
+    padding: 0;
+    border: none; }
+    .testimonials blockquote > p {
+      color: #333333;
+      font-family: "SFNS-Display", sans-serif;
+      font-size: 31px;
+      font-weight: 400;
+      line-height: 43px;
+      letter-spacing: -0.5px;
+      text-align: center; }
+    .testimonials blockquote footer cite p {
+      color: #333333;
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase; }
+    .testimonials blockquote footer cite span {
+      color: #333333;
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-size: 14px; }
+
+.contacts ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .contacts ul li {
+    width: 50%;
+    background: #ffffff; }
+    .contacts ul li:first-child {
+      padding: 34px 60px 0 40px; }
+    .contacts ul li h3 {
+      color: #333333;
+      font-family: "SFNS-Display", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      line-height: 36px;
+      text-transform: uppercase; }
+    .contacts ul li dl {
+      margin-bottom: 0; }
+      .contacts ul li dl:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0px;
+        opacity: 0;
+        visibility: hidden;
+        clear: both; }
+      .contacts ul li dl dt, .contacts ul li dl dd {
+        float: left; }
+      .contacts ul li dl dt {
+        color: #909090;
+        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        width: 100px; }
+      .contacts ul li dl dd {
+        color: #333333;
+        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-size: 17px;
+        letter-spacing: -0.07px;
+        line-height: 29px;
+        width: -webkit-calc(100% - 100px);
+        width: calc(100% - 100px); }
+        .contacts ul li dl dd a {
+          color: #909090;
+          font-size: 14px;
+          letter-spacing: 2px;
+          text-transform: uppercase; }
 
 .footer {
   padding: 60px 40px;
