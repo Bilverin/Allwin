@@ -23,32 +23,12 @@ $(document).ready(function() {
 
 		var wrId = $(this).attr('href'); 
 		if ($(wrId).length != 0) {
-			$('html, body').animate({ scrollTop: $(wrId).offset().top }, 2000);
+			$('html, body').animate({ scrollTop: $(wrId).offset().top - 130 }, 2000);
 		}
 
 		return false;
 	}); 
 
-	// scroll to top
-	$('.js-toTop').click(function(){
-
-		$('html, body').animate({ scrollTop: 0 }, 2000);
-
-		return false;
-	}); 
-
-});
-
-
-$(window).scroll(function(){
-
-	var pageOffset = $(window).scrollTop();
-
-	if(pageOffset < 750) {
-		$('.to-top').fadeOut();
-	} else {
-		$('.to-top').fadeIn();
-	}
 });
 
 $(window).on('load', function() {

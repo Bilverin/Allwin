@@ -8086,33 +8086,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .of-hidden {
   overflow: hidden; }
 
-a.to-top {
-  display: none;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  width: 50px;
-  height: 50px;
-  background: #f3f3f3;
-  border: 2px solid #606060;
-  -webkit-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out; }
-  a.to-top:hover {
-    background: #606060; }
-    a.to-top:hover i {
-      color: #ffffff; }
-  a.to-top i {
-    color: #606060;
-    font-size: 24px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out; }
-
 /*********************************/
 /*********** Modules *************/
 /*********************************/
@@ -8816,13 +8789,26 @@ a.to-top {
 
 .app {
   min-width: 320px;
-  padding: 0 0 40px;
+  padding: 130px 0 40px;
   overflow-x: hidden;
   background: #f3f3f3; }
   .app .wr-header {
-    position: relative;
+    position: fixed;
     z-index: 100;
-    padding: 40px 0; }
+    padding: 40px 0;
+    width: 100%;
+    top: 0;
+    left: 0; }
+    .app .wr-header:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: #f3f3f3; }
     @media (max-width: 991px) {
       .app .wr-header {
         padding: 20px 0; } }
