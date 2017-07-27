@@ -50,3 +50,7 @@ $(window).scroll(function(){
 		$('.to-top').fadeIn();
 	}
 });
+
+$(window).on('load', function() {
+	$('.intro-img').removeClass('inactive');
+});
