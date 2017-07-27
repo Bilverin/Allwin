@@ -6,6 +6,9 @@
 	.wr {
 		&-header {
 			position: relative; z-index: 100; padding: 40px 0;
+			@include respond-to(md) {
+				padding: 20px 0;
+			}
 		}
 
 		&-menu {
@@ -13,12 +16,24 @@
 			pointer-events: none;
 			&:after {
 				content: '';
-				position: absolute; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%);
+				position: fixed; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%); z-index: -1;
 				background: rgba(255,255,255,0.95);
 				transition: transform 0.3s linear;
 			}
 			&.active {
-				pointer-events: all;
+				pointer-events: all; overflow-y: auto;
+				&::-webkit-scrollbar {
+					width: 10px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background-color: #a9a9a9; border-radius: 5px;
+					&:hover {
+						background-color: #888888;
+					}
+					&:active {
+						background-color: #696969;
+					}
+				}
 				&:after {
 					transform: translateX(0);
 				}
@@ -27,10 +42,16 @@
 
 		&-intro {
 			padding: 130px 0 288px; position: relative;
+			@include respond-to(md) {
+				padding: 231px 0 362px;
+			}
 		}
 
 		&-services {
 			padding-bottom: 200px;
+			@include respond-to(md) {
+				padding-bottom: 80px;
+			}
 		}
 
 		&-advantages {
@@ -39,14 +60,23 @@
 
 		&-about {
 			padding: 181px 0 159px;
+			@include respond-to(md) {
+				padding: 162px 0 40px;
+			}
 		}
 
 		&-testimonials {
 			padding: 76px 0 174px;
+			@include respond-to(md) {
+				padding: 76px 0 54px;
+			}
 		}
 
 		&-partners {
 			padding: 67px 0 400px;
+			@include respond-to(md) {
+				padding: 67px 0 337px;
+			}
 		}
 		
 		&-footer {

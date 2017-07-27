@@ -24,6 +24,12 @@
 	@media all and (min-width: 1440px) {
 		width: 1390px;
 	}
+	@include respond-to(md) {
+		width: 758px;
+	}
+	@include respond-to(sm) {
+		width: 100%;
+	}
 }
 
 .of-hidden {
@@ -55,16 +61,28 @@ a.to-top {
 .section-header {
 	h3 {
 		color: #343434; font-family: $SF-Display; font-size: 31px; font-weight: 400; line-height: 36px; text-align: center;
+		@include respond-to(md) {
+			font-size: 16px; line-height: 24px; font-family: $HNC-Roman;
+		}
 	}
 }
 
 // header
 .header {
 	display: flex; justify-content: space-between; padding: 0 40px;
+	@include respond-to(md) {
+		padding: 0;
+	}
 	a.logo {
 		display: inline-block;
+		@include respond-to(md) {
+			padding-top: 6px;
+		}
 		img {
 			display: inline;
+			@include respond-to(md) {
+				width: 198px;
+			}
 		}
 	}
 	ul {
@@ -146,7 +164,13 @@ a.to-top {
 	ul {
 		&.navigation {
 			width: 500px; margin: 0 auto 139px; padding-top: 179px;
+			@include respond-to(md) {
+				padding-top: 219px; margin: 0 auto 259px;
+			}
 			li {
+				@include respond-to(md) {
+					margin-bottom: 16px;
+				}
 				a {
 					color: #333333; font-family: $SF-Display; font-size: 40px; font-weight: 400; line-height: 84px; text-transform: uppercase; letter-spacing: 2.8px; text-align: center;
 					display: block; width: 460px; margin: 0 auto; position: relative;
@@ -170,6 +194,9 @@ a.to-top {
 
 			li {
 				display: inline-block; margin-left: 10px; margin-bottom: 0;
+				@include respond-to(md) {
+					margin-left: 20px;
+				}
 				&:first-child {
 					margin-left: 0;
 				}
@@ -210,13 +237,22 @@ a.to-top {
 
 // intro
 .intro {
-	padding: 0 40px;
+	padding: 0 40px; position: relative; z-index: 10;
+	@include respond-to(md) {
+		padding: 0;
+	}
 	h1 {
 		color: $mc-1; font-family: $SF-Display; font-size: 52px; font-weight: 400; line-height: 56px;
+		@include respond-to(1440px) {
+			font-size: 48px;
+		}
 	}
 
 	&-img {
 		position: absolute; right: 0; bottom: -74px;
+		@include respond-to(md) {
+			right: -76px; bottom: -13px;
+		}
 		&.inactive {
 			.intro-img {
 				&-1, &-2 {
@@ -247,7 +283,7 @@ a.to-top {
 			position: absolute; right: 0; bottom: 0;
 			img {
 				display: block; position: relative;
-				transition: bottom 1s ease-out;
+				transition: bottom 1.5s cubic-bezier(.19,.35,.28,.89);
 			}
 		}
 		&-1 {
@@ -313,6 +349,10 @@ a.to-top {
 				color: #ffffff; font-family: $SF-Display; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.8px;
 				position: absolute; left: 66px; top: 35px; margin: 0; z-index: 10;
 				transition: color 0.3s ease-out;
+				@include respond-to(md) {
+					font-size: 16px; line-height: 24px; font-family: $HNC-Roman;
+					left: 20px; top: 20px; max-width: 200px;
+				}
 			}
 			div.info {
 				position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform: translateX(-100%); z-index: 5; padding-top: 200px;
@@ -327,6 +367,12 @@ a.to-top {
 			}
 			img {
 				position: relative;
+				@include respond-to(1440px) {
+					left: 50%; transform: translateX(-50%);
+				} 
+				@include respond-to(md) {
+					height: 229px;
+				}
 			}
 		}
 	}
@@ -335,23 +381,75 @@ a.to-top {
 // advantages
 .advantages {
 	padding-top: 59px;
+	@include respond-to(md) {
+		padding-top: 29px;
+	}
 	ul {
 		display: flex;
 		li {
 			position: relative; width: 33.33333%; height: 334px;
 			background: #ffffff; border-right: solid 1px #f3f3f3;
+			@include respond-to(md) {
+				height: 180px;
+			}
 			&:last-child {
 				border: none;
 			}
 			p {
 				text-align: center;
 				margin: 0; position: absolute; left: 50%; top: calc(50% + 4px); transform: translate(-50%,-50%);
+				@include respond-to(md) {
+					width: 100%; padding: 0 15px; position: relative; left: 0; top: 0; transform: none; padding-top: 50px;
+				}
 				i {
-					
+					&.icon{
+						&-target {
+							@include respond-to(md) {
+								display: none;
+							}
+							&-md {
+								display: none;
+								@include respond-to(md) {
+									display: inline-block;
+								}
+							}
+						}
+						&-ring {
+							@include respond-to(md) {
+								display: none;
+							}
+							&-md {
+								display: none;
+								@include respond-to(md) {
+									display: inline-block;
+								}
+							}
+						}
+						&-car {
+							@include respond-to(md) {
+								display: none;
+							}
+							&-md {
+								display: none;
+								@include respond-to(md) {
+									display: inline-block;
+								}
+							}
+						}
+					}
 				}
 				span {
 					color: #343434; font-family: $HNC-Roman; font-size: 17px; line-height: 23px; letter-spacing: -0.07px;
-					display: block; margin-top: 29px;
+					display: block; margin-top: 59px;
+					@include respond-to(md) {
+						font-size: 14px; line-height: 20px; letter-spacing: 0.2px;
+						margin-top: 12px;
+					}
+					br {
+						@include respond-to(md) {
+							display: none;
+						}
+					}
 				}
 			}
 		}
@@ -361,12 +459,23 @@ a.to-top {
 // about
 .about {
 	padding-left: 40px;
+	@include respond-to(md) {
+		padding-left: 0;
+	}
 	h4 {
 		color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; text-transform: uppercase; letter-spacing: 1.8px; line-height: 23px;
+		@include respond-to(md) {
+			font-size: 16px; line-height: 20px; font-family: $HNC-Roman; letter-spacing: 1.2px;
+			padding-top: 3px;
+		}
 	}
 	p {
 		color: #343434; font-family: $HNC-Roman; font-size: 17px; letter-spacing: 0.14px; line-height: 29px;
 		padding-left: 61px; margin-bottom: 25px;
+		@include respond-to(md) {
+			font-size: 14px; line-height: 27px; letter-spacing: 0.2px;
+			padding-left: 48px;
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -377,9 +486,12 @@ a.to-top {
 .testimonials {
 	position: relative; padding: 234px 0 104px;
 	background: #ffffff;
+	@include respond-to(md) {
+		padding: 116px 0 104px;
+	}
 	&:before {
 		content: '';
-		display: block; width: 32px; height: 25px; position: absolute; left: 50%; top: 120px; transform: translateX(-50%);
+		display: block; width: 32px; height: 25px; position: absolute; left: 50%; top: 50px; transform: translateX(-50%);
 		background: url('../img/quotes.png') center center no-repeat;
 	}
 	blockquote {
@@ -388,6 +500,16 @@ a.to-top {
 		border: none;
 		& > p {
 			color: #333333; font-family: $SF-Display; font-size: 31px; font-weight: 400; line-height: 43px; letter-spacing: -0.1px; text-align: center;
+			@include respond-to(md) {
+				font-size: 16px; line-height: 24px; font-family: $HNC-Roman; letter-spacing: 0.15px;
+				height: 130px;
+			}
+			br {
+				display: none;
+				@include respond-to(md) {
+					display: block;
+				}
+			}
 		}
 		footer {
 			margin-top: 47px;
@@ -395,9 +517,13 @@ a.to-top {
 				content: none;
 			}
 			cite {
+				display: block;
 				p {
 					color: #333333; font-family: $HNC-Roman; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
 					margin-bottom: 4px;
+					@include respond-to(md) {
+						margin-bottom: 11px;
+					}
 				}
 				span {
 					color: #333333; font-family: $HNC-Roman; font-size: 14px; line-height: 16px; letter-spacing: 0.2px;
