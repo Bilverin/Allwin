@@ -8666,93 +8666,153 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           line-height: 16px;
           letter-spacing: 0.2px; }
 
-.contacts ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .contacts ul li {
-    width: 50%;
-    background: #ffffff; }
-    .contacts ul li:first-child {
-      padding: 34px 60px 0 40px; }
-    .contacts ul li h3 {
-      color: #333333;
-      font-family: "SFNS-Display", sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      letter-spacing: 1.4px;
-      line-height: 36px;
-      text-transform: uppercase;
-      margin-bottom: 112px; }
-    .contacts ul li dl {
-      margin-bottom: 0; }
-      .contacts ul li dl:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 0px;
-        opacity: 0;
-        visibility: hidden;
-        clear: both; }
-      .contacts ul li dl dt, .contacts ul li dl dd {
-        float: left; }
-      .contacts ul li dl dt {
-        color: #909090;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 29px;
-        width: 100px; }
-      .contacts ul li dl dd {
+.contacts {
+  margin-bottom: 128px; }
+  @media (max-width: 991px) {
+    .contacts {
+      margin-bottom: 120px; } }
+  .contacts ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .contacts ul li {
+      width: 50%;
+      overflow: hidden;
+      background: #ffffff; }
+      .contacts ul li:first-child {
+        padding: 34px 60px 0 40px; }
+        @media (max-width: 991px) {
+          .contacts ul li:first-child {
+            padding: 20px 20px; } }
+      .contacts ul li h3 {
         color: #333333;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
-        font-size: 17px;
-        letter-spacing: -0.07px;
-        line-height: 29px;
-        width: -webkit-calc(100% - 100px);
-        width: calc(100% - 100px);
-        margin-bottom: 25px; }
-        .contacts ul li dl dd:last-child {
-          margin-bottom: 35px;
-          margin-top: -10px; }
-        .contacts ul li dl dd a {
+        font-family: "SFNS-Display", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        line-height: 36px;
+        text-transform: uppercase;
+        margin-bottom: 112px; }
+        @media (max-width: 991px) {
+          .contacts ul li h3 {
+            font-size: 16px;
+            letter-spacing: 1.12px;
+            margin-bottom: 62px; } }
+      .contacts ul li dl {
+        margin-bottom: 0; }
+        .contacts ul li dl:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0px;
+          opacity: 0;
+          visibility: hidden;
+          clear: both; }
+        .contacts ul li dl dt, .contacts ul li dl dd {
+          float: left; }
+        .contacts ul li dl dt {
           color: #909090;
+          font-family: "HelveticaNeueCyr-Roman", sans-serif;
           font-size: 14px;
-          letter-spacing: 2px;
-          text-transform: uppercase; }
+          font-weight: 400;
+          line-height: 29px;
+          width: 100px; }
+          @media (max-width: 991px) {
+            .contacts ul li dl dt {
+              font-size: 12px;
+              width: 66px; } }
+        .contacts ul li dl dd {
+          color: #333333;
+          font-family: "HelveticaNeueCyr-Roman", sans-serif;
+          font-size: 17px;
+          letter-spacing: -0.07px;
+          line-height: 29px;
+          width: -webkit-calc(100% - 100px);
+          width: calc(100% - 100px);
+          margin-bottom: 25px; }
+          @media (max-width: 991px) {
+            .contacts ul li dl dd {
+              font-size: 14px;
+              margin-bottom: 23px; } }
+          .contacts ul li dl dd:last-child {
+            margin-bottom: 0;
+            position: relative;
+            top: -10px; }
+            @media (max-width: 991px) {
+              .contacts ul li dl dd:last-child {
+                top: 15px; } }
+          .contacts ul li dl dd a {
+            color: #909090;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase; }
+      @media (max-width: 991px) {
+        .contacts ul li figure {
+          position: relative; }
+          .contacts ul li figure img {
+            position: absolute;
+            top: -26px;
+            left: -30%; } }
 
 .footer {
-  padding: 60px 40px;
+  padding: 60px 40px 40px;
   background-color: #3c3d41; }
+  @media (max-width: 991px) {
+    .footer {
+      padding: 30px 20px 40px; } }
   .footer p {
     color: #ffffff;
     font-family: "HelveticaNeueCyr-Roman", sans-serif;
     font-size: 12px;
     letter-spacing: 0.6px; }
+    @media (max-width: 991px) {
+      .footer p {
+        margin-bottom: 35px; } }
   .footer h3 {
     font-family: "HelveticaNeueCyr-Roman", sans-serif;
     line-height: 0.6;
     margin-top: 0;
     margin-bottom: 10px;
     min-height: 26px; }
+    @media (max-width: 991px) {
+      .footer h3 {
+        margin-bottom: 30px; } }
     .footer h3 a {
       color: #ffffff;
       font-size: 12px;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       opacity: 0.2; }
+  .footer .footer-third h3 {
+    min-height: 26px; }
+    @media (max-width: 991px) {
+      .footer .footer-third h3 {
+        min-height: auto; } }
   .footer .footer-devider {
-    margin-bottom: 40px;
     margin-top: 0;
+    margin-bottom: 40px;
     border: 1px solid #f3f3f3;
     opacity: 0.2; }
+    @media (max-width: 991px) {
+      .footer .footer-devider {
+        margin-top: 0px;
+        margin-bottom: 20px; } }
     .footer .footer-devider:nth-of-type(1) {
       margin-top: 52px; }
+      @media (max-width: 991px) {
+        .footer .footer-devider:nth-of-type(1) {
+          margin-top: 22px; } }
     .footer .footer-devider:nth-of-type(3) {
       margin-top: 18px; }
+      @media (max-width: 991px) {
+        .footer .footer-devider:nth-of-type(3) {
+          margin-bottom: 40px; } }
   .footer ul {
     margin: 20px 0 55px; }
+    @media (max-width: 991px) {
+      .footer ul {
+        margin: 0 0 40px; } }
     .footer ul li {
       margin-bottom: 10px; }
       .footer ul li a {
@@ -8782,6 +8842,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         display: inline-block;
         margin-left: 25px;
         margin-bottom: 0; }
+        @media (max-width: 991px) {
+          .footer .copyright ul.socials li {
+            margin-left: 40px; } }
         .footer .copyright ul.socials li:first-child {
           margin-left: 0; }
         .footer .copyright ul.socials li a i {

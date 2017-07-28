@@ -533,17 +533,27 @@
 }
 // contacts
 .contacts {
+	margin-bottom: 128px;
+	@include respond-to (md) {margin-bottom: 120px;}
 	ul {
 		display: flex;
 		li {
-			width: 50%;
+			width: 50%; overflow: hidden;
 			background: #ffffff;
 			&:first-child {
 				padding: 34px 60px 0 40px;
+				@include respond-to (md) {
+					padding: 20px 20px;
+				}
 			}
 			h3 {
 				color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
 				margin-bottom: 112px;
+
+				@include respond-to (md) {
+					font-size: 16px; letter-spacing: 1.12px;
+					margin-bottom: 62px
+				}
 			}
 			dl {
 				margin-bottom: 0;
@@ -557,14 +567,33 @@
 				dt {
 					color: #909090; font-family: $HNC-Roman; font-size: 14px; font-weight: 400; line-height: 29px;
 					width: 100px;
+					@include respond-to (md) {
+						font-size: 12px;
+						width: 66px;
+					}
 				}
 				dd {
 					color: #333333; font-family: $HNC-Roman; font-size: 17px; letter-spacing: -0.07px; line-height: 29px;
 					width: calc(100% - 100px); margin-bottom: 25px;
-					&:last-child {margin-bottom: 35px; margin-top: -10px;}
+					@include respond-to (md) {
+						font-size: 14px;
+						margin-bottom: 23px;
+					}
+					&:last-child {
+						margin-bottom: 0; position: relative; top: -10px;
+						@include respond-to (md) {
+							top: 15px;
+						}
+
+					}
 					a {
 						color: #909090; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
 					}
+				}
+			}
+			@include respond-to (md) {
+				figure { position: relative;
+					img {position: absolute; top: -26px; left: -30%;}
 				}
 			}
 		}
@@ -573,37 +602,60 @@
 
 // footer
 .footer {
-	padding: 60px 40px;
+	padding: 60px 40px 40px;
 	background-color: #3c3d41;
+	@include respond-to (md) {
+		padding: 30px 20px 40px;
+	}
 	
 	p {
 		color:#ffffff; font-family: $HNC-Roman; font-size: 12px; letter-spacing: 0.6px;
+		@include respond-to (md)  {
+			margin-bottom: 35px;
+		}
 	}
 	h3 {
 		font-family: $HNC-Roman; line-height: 0.6;
 		margin-top: 0; margin-bottom: 10px; min-height: 26px;
+		@include respond-to (md) {
+			margin-bottom: 30px;
+		}
 
 		a{
 			color: #ffffff; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
 			opacity: 0.2;
 		}
 	}
+	.footer-third h3 {
+		min-height: 26px;
+		@include respond-to (md) {min-height: auto;}
+	}
 	.footer-devider {
-		margin-bottom: 40px;
-		margin-top: 0;
-		border: 1px solid #f3f3f3;
-		opacity: 0.2;
+		margin-top: 0; margin-bottom: 40px;
+		border: 1px solid #f3f3f3; opacity: 0.2;
+		@include respond-to (md) {
+			margin-top: 0px; margin-bottom: 20px; 
+		}
 		
 		&:nth-of-type(1) {
 			margin-top: 52px;
+			@include respond-to (md) {
+				margin-top: 22px;
+			}
 		}
 		&:nth-of-type(3) {
 			margin-top: 18px;
+			@include respond-to (md) {
+				margin-bottom: 40px;
+			}
 		}
 	}
 
 	ul {
 		margin: 20px 0 55px;
+		@include respond-to (md) {
+			margin: 0 0 40px;
+		}
 		li{
 			margin-bottom: 10px;
 			a{
@@ -623,6 +675,9 @@
 
 			li {
 				display: inline-block; margin-left: 25px; margin-bottom: 0;
+				@include respond-to (md) {
+					margin-left: 40px;
+				}
 				&:first-child {
 					margin-left: 0;
 				}
