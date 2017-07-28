@@ -537,11 +537,21 @@
 	@include respond-to (md) {margin-bottom: 120px;}
 	ul {
 		display: flex;
+		@include respond-to (767px) {
+			flex-direction: column;
+		}
 		li {
 			width: 50%; overflow: hidden;
 			background: #ffffff;
+
+			@include respond-to (767px) {
+				width: 100%;
+			}
+
+			
 			&:first-child {
 				padding: 34px 60px 0 40px;
+
 				@include respond-to (md) {
 					padding: 20px 20px;
 				}
@@ -549,6 +559,9 @@
 			h3 {
 				color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
 				margin-bottom: 112px;
+				@include respond-to (1440px) {
+					margin-bottom: 62px	
+				}
 
 				@include respond-to (md) {
 					font-size: 16px; letter-spacing: 1.12px;
@@ -579,10 +592,16 @@
 						font-size: 14px;
 						margin-bottom: 23px;
 					}
+
 					&:last-child {
 						margin-bottom: 0; position: relative; top: -10px;
 						@include respond-to (md) {
 							top: 15px;
+						}
+
+						@include respond-to (767px) {
+							text-align: center;
+							width: 100%; top: -12px; margin-bottom: 12px;
 						}
 
 					}
@@ -591,9 +610,47 @@
 					}
 				}
 			}
-			@include respond-to (md) {
-				figure { position: relative;
-					img {position: absolute; top: -26px; left: -30%;}
+			figure {
+				position: relative;
+				@include respond-to (1440px) {height: 426px;}
+				@include respond-to (md)  {height: 412px;}
+				@include respond-to (767px) {height: 250px;}
+				@include respond-to (xs) {height: 182px;}
+				img {
+					&.contacts-md {
+						display:none;
+
+						@include respond-to (md) {
+							display: block;
+						}
+						@include respond-to (767px) {
+							display: none;
+						}
+					}
+					&.contacts-desctop {
+						@include respond-to (1440px) {
+							position: absolute;
+							top: 0;
+							left: -15%;
+						}
+						@include respond-to (md) {
+								display: none;
+						}
+						@include respond-to (767px) {
+							display: block;
+							position: absolute;
+							top: -25%;
+							left: 0;
+							width: 100%;
+						}
+						@include respond-to (xs) {
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+						}
+					}
 				}
 			}
 		}
@@ -604,6 +661,9 @@
 .footer {
 	padding: 60px 40px 40px;
 	background-color: #3c3d41;
+	@include respond-to (1440px) {
+		padding: 40px 30px 40px;
+	}
 	@include respond-to (md) {
 		padding: 30px 20px 40px;
 	}
@@ -640,7 +700,10 @@
 		&:nth-of-type(1) {
 			margin-top: 52px;
 			@include respond-to (md) {
-				margin-top: 22px;
+				margin-top: 15px;
+			}
+			@include respond-to (xs) {
+				margin-top: 10px;
 			}
 		}
 		&:nth-of-type(3) {
@@ -656,6 +719,11 @@
 		@include respond-to (md) {
 			margin: 0 0 40px;
 		}
+		@include respond-to (xs) {
+			position: relative;
+			top: -10px;
+			margin: 0 0 25px;
+		}
 		li{
 			margin-bottom: 10px;
 			a{
@@ -667,11 +735,20 @@
 
 	.copyright {
 		position:relative; display: flex; justify-content: space-between;
+		@include respond-to (767px) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 		small {
 			color: #909090; font-family: $HNC-Roman; font-size: 14px;
 		}
 		ul.socials {
 			margin: 0;
+
+			@include respond-to (767px) {
+				top:0;
+				margin-bottom: 35px;
+			}
 
 			li {
 				display: inline-block; margin-left: 25px; margin-bottom: 0;
