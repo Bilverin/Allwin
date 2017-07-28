@@ -591,6 +591,7 @@
 					@include respond-to (md) {
 						font-size: 14px;
 						margin-bottom: 23px;
+						width: calc(100% - 66px);
 					}
 
 					&:last-child {

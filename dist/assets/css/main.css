@@ -8747,7 +8747,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           @media (max-width: 991px) {
             .contacts ul li dl dd {
               font-size: 14px;
-              margin-bottom: 23px; } }
+              margin-bottom: 23px;
+              width: -webkit-calc(100% - 66px);
+              width: calc(100% - 66px); } }
           .contacts ul li dl dd:last-child {
             margin-bottom: 0;
             position: relative;
