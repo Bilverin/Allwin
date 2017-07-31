@@ -1,3 +1,56 @@
+.wr {
+	&-header {
+		position: fixed; z-index: 100; padding: 40px 0; width: 100%; top: 0; left: 0;
+		@include respond-to(md) {
+			padding: 20px 0;
+		}
+		@include respond-to(xs) {
+			padding: 15px 0;
+		}
+
+		&-bg {
+			position: fixed; z-index: 50; height: 130px; width: 100%; top: 0; left: 0;
+			background: #f3f3f3;
+			@include respond-to(md) {
+				height: 90px;
+			}
+			@include respond-to(md) {
+				height: 80px;
+			}
+		}
+	}
+
+	&-menu {
+		position: fixed; top: 0; left: 0; right: 0; bottom: 0;  z-index: 95;
+		pointer-events: none;
+		&:after {
+			content: '';
+			position: fixed; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%); z-index: -1;
+			background: rgba(255,255,255,0.95);
+			transition: transform 0.3s 0.3s linear;
+		}
+		&.active {
+			pointer-events: all; overflow-y: auto;
+			&::-webkit-scrollbar {
+				width: 10px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: #a9a9a9; border-radius: 5px;
+				&:hover {
+					background-color: #888888;
+				}
+				&:active {
+					background-color: #696969;
+				}
+			}
+			&:after {
+				transform: translateX(0);
+				transition: transform 0.3s linear;
+			}
+		}
+	}
+}
+
 .app {
 	min-width: 320px; padding: 130px 0 40px;
 	overflow-x: hidden;
@@ -10,57 +63,7 @@
 	}
 
 	.wr {
-		&-header {
-			position: fixed; z-index: 100; padding: 40px 0; width: 100%; top: 0; left: 0;
-			@include respond-to(md) {
-				padding: 20px 0;
-			}
-			@include respond-to(xs) {
-				padding: 15px 0;
-			}
-
-			&-bg {
-				position: fixed; z-index: 50; height: 130px; width: 100%; top: 0; left: 0;
-				background: #f3f3f3;
-				@include respond-to(md) {
-					height: 90px;
-				}
-				@include respond-to(md) {
-					height: 80px;
-				}
-			}
-		}
-
-		&-menu {
-			position: fixed; top: 0; left: 0; right: 0; bottom: 0;  z-index: 95;
-			pointer-events: none;
-			&:after {
-				content: '';
-				position: fixed; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%); z-index: -1;
-				background: rgba(255,255,255,0.95);
-				transition: transform 0.3s 0.3s linear;
-			}
-			&.active {
-				pointer-events: all; overflow-y: auto;
-				&::-webkit-scrollbar {
-					width: 10px;
-				}
-				&::-webkit-scrollbar-thumb {
-					background-color: #a9a9a9; border-radius: 5px;
-					&:hover {
-						background-color: #888888;
-					}
-					&:active {
-						background-color: #696969;
-					}
-				}
-				&:after {
-					transform: translateX(0);
-					transition: transform 0.3s linear;
-				}
-			}
-		}
-
+		
 		&-intro {
 			padding: 130px 0 288px; position: relative;
 			@include respond-to(md) {
@@ -108,7 +111,10 @@
 		&-partners {
 			padding: 67px 0 172px;
 			@include respond-to(md) {
-				padding: 67px 0 337px;
+				padding: 67px 0 152px;
+			}
+			@include respond-to(xs) {
+				padding: 67px 0 82px;
 			}
 		}
 
