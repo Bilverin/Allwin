@@ -29,6 +29,15 @@ $(document).ready(function() {
 		return false;
 	}); 
 
+	// partners carousel
+	$('.owl-carousel').owlCarousel();
+
+	// scrollr js
+	var s = skrollr.init();
+
+	// wow js
+	new WOW().init();
+
 });
 
 $(window).on('load', function() {

@@ -2,17 +2,32 @@
 	min-width: 320px; padding: 130px 0 40px;
 	overflow-x: hidden;
 	background: #f3f3f3;
+	@include respond-to(md) {
+		padding: 90px 0 40px;
+	}
+	@include respond-to(md) {
+		padding: 80px 0 40px;
+	}
 
 	.wr {
 		&-header {
 			position: fixed; z-index: 100; padding: 40px 0; width: 100%; top: 0; left: 0;
-			&:after {
-				content: '';
-				display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;
-				background: #f3f3f3;
-			}
 			@include respond-to(md) {
 				padding: 20px 0;
+			}
+			@include respond-to(xs) {
+				padding: 15px 0;
+			}
+
+			&-bg {
+				position: fixed; z-index: 50; height: 130px; width: 100%; top: 0; left: 0;
+				background: #f3f3f3;
+				@include respond-to(md) {
+					height: 90px;
+				}
+				@include respond-to(md) {
+					height: 80px;
+				}
 			}
 		}
 
@@ -23,7 +38,7 @@
 				content: '';
 				position: fixed; top: 0; left: 0; right: 0; bottom: 0; transform: translateX(-100%); z-index: -1;
 				background: rgba(255,255,255,0.95);
-				transition: transform 0.3s linear;
+				transition: transform 0.3s 0.3s linear;
 			}
 			&.active {
 				pointer-events: all; overflow-y: auto;
@@ -41,6 +56,7 @@
 				}
 				&:after {
 					transform: translateX(0);
+					transition: transform 0.3s linear;
 				}
 			}
 		}
@@ -49,6 +65,12 @@
 			padding: 130px 0 288px; position: relative;
 			@include respond-to(md) {
 				padding: 231px 0 362px;
+			}
+			@include respond-to(sm) {
+				padding: 130px 0 360px;
+			}
+			@include respond-to(xs) {
+				padding: 26px 0 144px;
 			}
 		}
 
@@ -61,12 +83,18 @@
 
 		&-advantages {
 			padding: 41px 0 59px;
+			@include respond-to(xs) {
+				padding: 41px 0 30px;
+			}
 		}
 
 		&-about {
 			padding: 181px 0 159px;
 			@include respond-to(md) {
 				padding: 162px 0 40px;
+			}
+			@include respond-to(xs) {
+				padding: 92px 0 40px;
 			}
 		}
 
@@ -78,9 +106,16 @@
 		}
 
 		&-partners {
-			padding: 67px 0 400px;
+			padding: 67px 0 172px;
 			@include respond-to(md) {
 				padding: 67px 0 337px;
+			}
+		}
+
+		&-contacts {
+			padding: 0 0 128px;
+			@include respond-to(md) {
+				padding: 0 0 117px;
 			}
 		}
 		

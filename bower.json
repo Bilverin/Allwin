@@ -1,12 +1,12 @@
 {
-  "name": "Template",
-  "description": "CODE.MBA base template",
+  "name": "Allwin",
+  "description": "Allwin",
   "main": "",
   "authors": [
     "Alexeev"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/Bilverin/Allwin",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,10 +15,13 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1",
     "normalize-css": "^6.0.0",
     "font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "owl.carousel": "^2.2.1",
+    "jquery": "2.2.4",
+    "skrollr": "scrollr#^0.6.30",
+    "wow": "wow-mit#^1.3.0"
   }
 }

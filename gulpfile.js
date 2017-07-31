@@ -49,10 +49,12 @@ gulp.task('sass', function () {
 // libs js
 gulp.task('js:libs', function () {
 	gulp.src([
-		'bower_components/jquery/dist/jquery.min.js'
+		'bower_components/jquery/dist/jquery.min.js',
+		'bower_components/owl.carousel/dist/owl.carousel.min.js',
+		'bower_components/skrollr/dist/skrollr.min.js',
+		'bower_components/wow/dist/wow.min.js'
 		])
 	.pipe(concat('libs.min.js'))
-	.pipe(uglify())
 	.pipe(gulp.dest('dist/assets/js/'));
 });
 
