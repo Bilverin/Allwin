@@ -10620,6 +10620,54 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: HelveticaNeueCyr-Roman;
     src: url("../fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman") format("svg"); } }
 
+@font-face {
+  font-family: AkzidenzGroteskPro-Light;
+  src: url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.eot");
+  src: url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.eot") format("embedded-opentype"), url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.woff") format("woff"), url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.ttf") format("truetype"), url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.svg#AkzidenzGroteskPro-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: AkzidenzGroteskPro-Light;
+    src: url("../fonts/AkzidenzGroteskPro-Light/AkzidenzGroteskPro-Light.svg#AkzidenzGroteskPro-Light") format("svg"); } }
+
+@font-face {
+  font-family: AkzidenzGroteskPro-MdEx;
+  src: url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.eot");
+  src: url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.eot") format("embedded-opentype"), url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.woff") format("woff"), url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.ttf") format("truetype"), url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.svg#AkzidenzGroteskPro-MdEx") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: AkzidenzGroteskPro-MdEx;
+    src: url("../fonts/AkzidenzGroteskPro-MdEx/AkzidenzGroteskPro-MdEx.svg#AkzidenzGroteskPro-MdEx") format("svg"); } }
+
+@font-face {
+  font-family: AkzidenzGroteskPro-Regular;
+  src: url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.eot");
+  src: url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.eot") format("embedded-opentype"), url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.woff") format("woff"), url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.ttf") format("truetype"), url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.svg#AkzidenzGroteskPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: AkzidenzGroteskPro-Regular;
+    src: url("../fonts/AkzidenzGroteskPro-Regular/AkzidenzGroteskPro-Regular.svg#AkzidenzGroteskPro-Regular") format("svg"); } }
+
+@font-face {
+  font-family: AkzidenzGroteskPro-Ext;
+  src: url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.eot");
+  src: url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.eot") format("embedded-opentype"), url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.woff") format("woff"), url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.ttf") format("truetype"), url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.svg#AkzidenzGroteskPro-Ext") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: AkzidenzGroteskPro-Ext;
+    src: url("../fonts/AkzidenzGroteskPro-Ext/AkzidenzGroteskPro-Ext.svg#AkzidenzGroteskPro-Ext") format("svg"); } }
+
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -10674,16 +10722,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .section-header h3 {
   color: #343434;
-  font-family: "SFNS-Display", sans-serif;
+  font-family: "AkzidenzGroteskPro-Light", sans-serif;
   font-size: 31px;
   font-weight: 400;
   line-height: 36px;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: -0.15px; }
   @media (max-width: 991px) {
     .section-header h3 {
       font-size: 16px;
-      line-height: 24px;
-      font-family: "HelveticaNeueCyr-Roman", sans-serif; } }
+      line-height: 24px; } }
 
 .header {
   display: -webkit-box;
@@ -10717,12 +10765,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .header ul li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 47px; }
+    margin-right: 32px; }
     @media (max-width: 767px) {
       .header ul li {
         margin-right: 25px; } }
     .header ul li:first-child {
-      padding-top: 8px; }
+      padding-top: 7px; }
       @media (max-width: 480px) {
         .header ul li:first-child {
           display: none; } }
@@ -10733,10 +10781,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         width: 50px; }
     .header ul li a {
       color: #343434;
-      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
       font-size: 15px;
       line-height: 36px;
       text-transform: uppercase;
+      letter-spacing: -0.25px;
       display: block; }
       .header ul li a:hover span:after {
         -webkit-transform: translateX(0);
@@ -10874,7 +10923,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
   .menu a.phone {
     color: #343434;
-    font-family: "HelveticaNeueCyr-Roman", sans-serif;
+    font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
     font-size: 15px;
     letter-spacing: -0.27px;
     line-height: 36px;
@@ -11026,10 +11075,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       padding: 0; } }
   .intro h1 {
     color: #343434;
-    font-family: "SFNS-Display", sans-serif;
+    font-family: "AkzidenzGroteskPro-Light", sans-serif;
     font-size: 52px;
     font-weight: 400;
-    line-height: 56px; }
+    line-height: 56px;
+    letter-spacing: -0.2px; }
     @media (max-width: 1440px) {
       .intro h1 {
         font-size: 48px; } }
@@ -11231,15 +11281,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       transition: opacity 0.3s 0.3s ease-out, transform 0.3s 0.3s ease-out, -webkit-transform 0.3s 0.3s ease-out; }
     .services ul li h2 {
       color: #ffffff;
-      font-family: "SFNS-Display", sans-serif;
+      font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 36px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.3px;
       position: absolute;
-      left: 66px;
-      top: 35px;
+      left: 44px;
+      top: 34px;
       margin: 0;
       z-index: 10;
       -webkit-transition: color 0.4s ease-out;
@@ -11248,7 +11298,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         .services ul li h2 {
           font-size: 16px;
           line-height: 24px;
-          font-family: "HelveticaNeueCyr-Roman", sans-serif;
           left: 20px;
           top: 20px;
           max-width: 200px; } }
@@ -11286,7 +11335,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         transition: opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
       .services ul li div.info p {
         color: #343434;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-family: "AkzidenzGroteskPro-Regular", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -11294,12 +11343,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         margin-bottom: 15px; }
       .services ul li div.info a {
         color: #343434;
-        font-family: "SFNS-Display", sans-serif;
+        font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 36px;
         text-transform: uppercase;
-        letter-spacing: 1.4px;
+        letter-spacing: 1.3px;
         display: inline-block; }
     .services ul li img {
       position: relative; }
@@ -11360,23 +11409,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .advantages ul li p {
         text-align: center;
         margin: 0;
-        position: absolute;
-        left: 50%;
-        top: -webkit-calc(50% + 4px);
-        top: calc(50% + 4px);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
+        padding: 101px 15px 0; }
         @media (max-width: 991px) {
           .advantages ul li p {
-            width: 100%;
-            padding: 0 15px;
-            position: relative;
-            left: 0;
-            top: 0;
-            -webkit-transform: none;
-            -ms-transform: none;
-            transform: none;
             padding-top: 50px; } }
         @media (max-width: 991px) {
           .advantages ul li p i.icon-target {
@@ -11394,6 +11429,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           @media (max-width: 991px) {
             .advantages ul li p i.icon-ring-md {
               display: inline-block; } }
+        .advantages ul li p i.icon-ring, .advantages ul li p i.icon-ring-md {
+          margin-top: 4px;
+          margin-bottom: 5px; }
+          @media (max-width: 767px) {
+            .advantages ul li p i.icon-ring, .advantages ul li p i.icon-ring-md {
+              margin-top: 0;
+              margin-bottom: 0; } }
         @media (max-width: 991px) {
           .advantages ul li p i.icon-car {
             display: none; } }
@@ -11404,12 +11446,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
               display: inline-block; } }
         .advantages ul li p span {
           color: #343434;
-          font-family: "HelveticaNeueCyr-Roman", sans-serif;
+          font-family: "AkzidenzGroteskPro-Light", sans-serif;
           font-size: 17px;
           line-height: 23px;
           letter-spacing: -0.07px;
           display: block;
-          margin-top: 59px; }
+          margin-top: 27px; }
           @media (max-width: 991px) {
             .advantages ul li p span {
               font-size: 14px;
@@ -11427,17 +11469,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       padding-left: 0; } }
   .about h4 {
     color: #333333;
-    font-family: "SFNS-Display", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
+    font-size: 19px;
     text-transform: uppercase;
-    letter-spacing: 1.8px;
-    line-height: 23px; }
+    letter-spacing: 2.2px;
+    line-height: 26px; }
     @media (max-width: 991px) {
       .about h4 {
         font-size: 16px;
         line-height: 20px;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
         letter-spacing: 1.2px;
         padding-top: 3px; } }
     @media (max-width: 767px) {
@@ -11446,9 +11486,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         margin-bottom: 31px; } }
   .about p {
     color: #343434;
-    font-family: "HelveticaNeueCyr-Roman", sans-serif;
+    font-family: "AkzidenzGroteskPro-Regular", sans-serif;
     font-size: 17px;
-    letter-spacing: 0.14px;
+    letter-spacing: -0.25px;
     line-height: 29px;
     padding-left: 61px;
     margin-bottom: 25px; }
@@ -11467,7 +11507,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .testimonials {
   position: relative;
   padding: 234px 0 104px;
-  height: 552px;
+  height: 570px;
   background: #ffffff; }
   @media (max-width: 991px) {
     .testimonials {
@@ -11482,11 +11522,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     height: 25px;
     position: absolute;
     left: 50%;
-    top: 50px;
+    top: 121px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     background: url("../img/quotes.png") center center no-repeat; }
+    @media (max-width: 991px) {
+      .testimonials:before {
+        top: 50px; } }
   .testimonials ul.items {
     position: relative; }
     .testimonials ul.items li {
@@ -11531,11 +11574,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
             padding: 0 15px; } }
         .testimonials ul.items li blockquote > p {
           color: #333333;
-          font-family: "SFNS-Display", sans-serif;
+          font-family: "AkzidenzGroteskPro-Light", sans-serif;
           font-size: 31px;
           font-weight: 400;
           line-height: 43px;
-          letter-spacing: -0.1px;
+          letter-spacing: -0.5px;
           text-align: center;
           -webkit-transform: translateX(150px);
           -ms-transform: translateX(150px);
@@ -11547,7 +11590,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
             .testimonials ul.items li blockquote > p {
               font-size: 16px;
               line-height: 24px;
-              font-family: "HelveticaNeueCyr-Roman", sans-serif;
               letter-spacing: 0.15px;
               height: 130px; } }
           @media (max-width: 767px) {
@@ -11559,7 +11601,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
               .testimonials ul.items li blockquote > p br {
                 display: block; } }
         .testimonials ul.items li blockquote footer {
-          margin-top: 47px;
+          margin-top: 90px;
+          position: relative;
           opacity: 0;
           -webkit-transition: 0.5s ease-out;
           transition: 0.5s ease-out; }
@@ -11568,16 +11611,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
               width: 60%;
               margin: 47px auto 0; } }
           .testimonials ul.items li blockquote footer:before {
-            content: none; }
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -50px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: #f3f3f3; }
           .testimonials ul.items li blockquote footer cite {
             display: block; }
             .testimonials ul.items li blockquote footer cite p {
               color: #333333;
-              font-family: "HelveticaNeueCyr-Roman", sans-serif;
+              font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
               font-size: 12px;
               letter-spacing: 1.2px;
               text-transform: uppercase;
-              margin-bottom: 4px; }
+              margin-bottom: 5px; }
               @media (max-width: 991px) {
                 .testimonials ul.items li blockquote footer cite p {
                   margin-bottom: 11px; } }
@@ -11591,7 +11643,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
                     display: block; } }
             .testimonials ul.items li blockquote footer cite span {
               color: #333333;
-              font-family: "HelveticaNeueCyr-Roman", sans-serif;
+              font-family: "AkzidenzGroteskPro-Light", sans-serif;
               font-size: 14px;
               line-height: 16px;
               letter-spacing: 0.2px; }
@@ -11641,7 +11693,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         pointer-events: all; }
       .partners ul li a span {
         color: #333333;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-family: "AkzidenzGroteskPro-Light", sans-serif;
         font-size: 17px;
         letter-spacing: -0.07px;
         line-height: 23px;
@@ -11688,13 +11740,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           padding: 15px 20px 32px; } }
     .contacts ul li h3 {
       color: #333333;
-      font-family: "SFNS-Display", sans-serif;
+      font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
       font-size: 20px;
       font-weight: 400;
       letter-spacing: 1.4px;
       line-height: 36px;
       text-transform: uppercase;
-      margin-bottom: 112px; }
+      margin-bottom: 113px; }
       @media (max-width: 1440px) {
         .contacts ul li h3 {
           margin-bottom: 62px; } }
@@ -11720,7 +11772,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         float: left; }
       .contacts ul li dl dt {
         color: #909090;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-family: "AkzidenzGroteskPro-Light", sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 29px;
@@ -11731,7 +11783,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
             width: 66px; } }
       .contacts ul li dl dd {
         color: #333333;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-family: "AkzidenzGroteskPro-Light", sans-serif;
         font-size: 17px;
         letter-spacing: -0.07px;
         line-height: 29px;
@@ -11748,7 +11800,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         .contacts ul li dl dd:last-child {
           margin-bottom: 0;
           position: relative;
-          top: -10px; }
+          top: -8px; }
           @media (max-width: 991px) {
             .contacts ul li dl dd:last-child {
               top: 15px; } }
@@ -11760,7 +11812,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         .contacts ul li dl dd a {
           color: #909090;
           font-size: 14px;
-          letter-spacing: 2px;
+          letter-spacing: 2.2px;
           text-transform: uppercase; }
         @media (max-width: 767px) {
           .contacts ul li dl dd br {
@@ -11811,17 +11863,17 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           width: 100%; } }
 
 .footer {
-  padding: 60px 40px 40px;
+  padding: 57px 40px 29px;
   background-color: #3c3d41; }
   @media (max-width: 1440px) {
     .footer {
-      padding: 40px 30px 40px; } }
+      padding: 40px 30px 29px; } }
   @media (max-width: 991px) {
     .footer {
-      padding: 30px 20px 40px; } }
+      padding: 30px 20px 29px; } }
   @media (max-width: 767px) {
     .footer {
-      padding: 28px 20px 40px; } }
+      padding: 28px 20px 29px; } }
   @media (max-width: 767px) {
     .footer .col-sm-6 {
       width: 50%;
@@ -11830,16 +11882,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .footer .col-sm-6 {
       width: 100%;
       float: none; } }
-  .footer p {
+  .footer p a {
     color: #ffffff;
-    font-family: "HelveticaNeueCyr-Roman", sans-serif;
+    font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
     font-size: 12px;
     letter-spacing: 0.6px; }
     @media (max-width: 991px) {
-      .footer p {
+      .footer p a {
         margin-bottom: 29px; } }
+    .footer p a:hover {
+      text-decoration: underline; }
   .footer h3 {
-    font-family: "HelveticaNeueCyr-Roman", sans-serif;
+    font-family: "AkzidenzGroteskPro-Ext", sans-serif;
     line-height: 0.6;
     margin-top: 0;
     margin-bottom: 10px; }
@@ -11853,7 +11907,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .footer h3 a {
       color: #ffffff;
       font-size: 12px;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.35px;
       text-transform: uppercase;
       line-height: 15px;
       display: inline-block;
@@ -11887,7 +11941,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         margin-top: 20px;
         margin-bottom: 13px; } }
     .footer .footer-devider:nth-of-type(3) {
-      margin-top: 18px; }
+      margin-top: 30px;
+      margin-bottom: 34px; }
       @media (max-width: 991px) {
         .footer .footer-devider:nth-of-type(3) {
           margin-bottom: 40px; } }
@@ -11895,7 +11950,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         .footer .footer-devider:nth-of-type(3) {
           margin-top: 21px; } }
   .footer ul {
-    margin: 20px 0 55px; }
+    margin: 16px 0 57px; }
     @media (max-width: 991px) {
       .footer ul {
         margin: 0 0 40px; } }
@@ -11907,7 +11962,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       margin-bottom: 10px; }
       .footer ul li a {
         color: #ffffff;
-        font-family: "HelveticaNeueCyr-Roman", sans-serif;
+        font-family: "AkzidenzGroteskPro-Light", sans-serif;
         font-size: 15px;
         letter-spacing: -0.07px; }
         .footer ul li a:hover {
@@ -11938,7 +11993,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .footer .copyright small {
       color: #909090;
       font-family: "HelveticaNeueCyr-Roman", sans-serif;
-      font-size: 14px; }
+      font-size: 14px;
+      padding-top: 5px; }
       @media (max-width: 767px) {
         .footer .copyright small {
           text-align: center; } }
@@ -12092,7 +12148,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .app {
       padding: 80px 0 40px; } }
   .app .wr-intro {
-    padding: 130px 0 288px;
+    padding: 128px 0 290px;
     position: relative; }
     @media (max-width: 991px) {
       .app .wr-intro {
@@ -12114,7 +12170,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .app .wr-advantages {
         padding: 41px 0 30px; } }
   .app .wr-about {
-    padding: 181px 0 159px; }
+    padding: 101px 0 79px; }
     @media (max-width: 991px) {
       .app .wr-about {
         padding: 162px 0 40px; } }
@@ -12122,10 +12178,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .app .wr-about {
         padding: 92px 0 40px; } }
   .app .wr-testimonials {
-    padding: 76px 0 174px; }
+    padding: 76px 0 104px; }
     @media (max-width: 991px) {
       .app .wr-testimonials {
         padding: 76px 0 54px; } }
+    .app .wr-testimonials .section-header {
+      margin-bottom: 59px; }
   .app .wr-partners {
     padding: 67px 0 172px; }
     @media (max-width: 991px) {

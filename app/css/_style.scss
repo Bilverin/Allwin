@@ -65,7 +65,7 @@
 	.wr {
 		
 		&-intro {
-			padding: 130px 0 288px; position: relative;
+			padding: 128px 0 290px; position: relative;
 			@include respond-to(md) {
 				padding: 231px 0 362px;
 			}
@@ -92,7 +92,7 @@
 		}
 
 		&-about {
-			padding: 181px 0 159px;
+			padding: 101px 0 79px;
 			@include respond-to(md) {
 				padding: 162px 0 40px;
 			}
@@ -102,9 +102,12 @@
 		}
 
 		&-testimonials {
-			padding: 76px 0 174px;
+			padding: 76px 0 104px;
 			@include respond-to(md) {
 				padding: 76px 0 54px;
+			}
+			.section-header {
+				margin-bottom: 59px;
 			}
 		}
 

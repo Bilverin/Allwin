@@ -49,9 +49,9 @@
 // sections header
 .section-header {
 	h3 {
-		color: #343434; font-family: $SF-Display; font-size: 31px; font-weight: 400; line-height: 36px; text-align: center;
+		color: #343434; font-family: $main-Light; font-size: 31px; font-weight: 400; line-height: 36px; text-align: center; letter-spacing: -0.15px;
 		@include respond-to(md) {
-			font-size: 16px; line-height: 24px; font-family: $HNC-Roman;
+			font-size: 16px; line-height: 24px;
 		}
 	}
 }
@@ -82,12 +82,12 @@
 	}
 	ul {
 		li {
-			display: inline-block; vertical-align: top; margin-right: 47px;
+			display: inline-block; vertical-align: top; margin-right: 32px;
 			@include respond-to(sm) {
 				margin-right: 25px;
 			}
 			&:first-child {
-				padding-top: 8px;
+				padding-top: 7px;
 				@include respond-to(xs) {
 					display: none;
 				}
@@ -99,7 +99,7 @@
 				}
 			}
 			a {
-				color: $mc-1; font-family: $HNC-Roman; font-size: 15px; line-height: 36px; text-transform: uppercase;
+				color: $mc-1; font-family: $main-MdEx; font-size: 15px; line-height: 36px; text-transform: uppercase; letter-spacing: -0.25px;
 				display: block;
 				&:hover {
 					span {
@@ -213,7 +213,7 @@
 	}
 
 	a.phone {
-		color: #343434; font-family: $HNC-Roman; font-size: 15px; letter-spacing: -0.27px; line-height: 36px; text-transform: uppercase; text-align: center;
+		color: #343434; font-family: $main-MdEx; font-size: 15px; letter-spacing: -0.27px; line-height: 36px; text-transform: uppercase; text-align: center;
 		display: none; margin-bottom: 23px;
 		@include respond-to(xs) {
 			display: block;
@@ -326,7 +326,7 @@
 		padding: 0;
 	}
 	h1 {
-		color: $mc-1; font-family: $SF-Display; font-size: 52px; font-weight: 400; line-height: 56px;
+		color: $mc-1; font-family: $main-Light; font-size: 52px; font-weight: 400; line-height: 56px; letter-spacing: -0.2px;
 		@include respond-to(1440px) {
 			font-size: 48px;
 		}
@@ -503,11 +503,11 @@
 				}
 			}
 			h2 {
-				color: #ffffff; font-family: $SF-Display; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.8px;
-				position: absolute; left: 66px; top: 35px; margin: 0; z-index: 10;
+				color: #ffffff; font-family: $main-MdEx; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.3px;
+				position: absolute; left: 44px; top: 34px; margin: 0; z-index: 10;
 				transition: color 0.4s ease-out;
 				@include respond-to(md) {
-					font-size: 16px; line-height: 24px; font-family: $HNC-Roman;
+					font-size: 16px; line-height: 24px;
 					left: 20px; top: 20px; max-width: 200px;
 				}
 			}
@@ -524,11 +524,11 @@
 					transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 				}
 				p {
-					color: $mc-1; font-family: $HNC-Roman; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: 0.7px;
+					color: $mc-1; font-family: $main-Regular; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: 0.7px;
 					margin-bottom: 15px;
 				}
 				a {
-					color: $mc-1; font-family: $SF-Display; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.4px;
+					color: $mc-1; font-family: $main-MdEx; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.3px;
 					display: inline-block;
 				}
 			}
@@ -582,9 +582,9 @@
 			}
 			p {
 				text-align: center;
-				margin: 0; position: absolute; left: 50%; top: calc(50% + 4px); transform: translate(-50%,-50%);
+				margin: 0; padding: 101px 15px 0;
 				@include respond-to(md) {
-					width: 100%; padding: 0 15px; position: relative; left: 0; top: 0; transform: none; padding-top: 50px;
+					padding-top: 50px;
 				}
 				i {
 					&.icon{
@@ -609,6 +609,12 @@
 									display: inline-block;
 								}
 							}
+							&, &-md {
+								margin-top: 4px; margin-bottom: 5px;
+								@include respond-to(sm) {
+									margin-top: 0; margin-bottom: 0;
+								}
+							}
 						}
 						&-car {
 							@include respond-to(md) {
@@ -624,8 +630,8 @@
 					}
 				}
 				span {
-					color: #343434; font-family: $HNC-Roman; font-size: 17px; line-height: 23px; letter-spacing: -0.07px;
-					display: block; margin-top: 59px;
+					color: #343434; font-family: $main-Light; font-size: 17px; line-height: 23px; letter-spacing: -0.07px;
+					display: block; margin-top: 27px;
 					@include respond-to(md) {
 						font-size: 14px; line-height: 20px; letter-spacing: 0.2px;
 						margin-top: 12px;
@@ -648,9 +654,9 @@
 		padding-left: 0;
 	}
 	h4 {
-		color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; text-transform: uppercase; letter-spacing: 1.8px; line-height: 23px;
+		color: #333333; font-family: $main-MdEx; font-size: 19px; text-transform: uppercase; letter-spacing: 2.2px; line-height: 26px;
 		@include respond-to(md) {
-			font-size: 16px; line-height: 20px; font-family: $HNC-Roman; letter-spacing: 1.2px;
+			font-size: 16px; line-height: 20px; letter-spacing: 1.2px;
 			padding-top: 3px;
 		}
 		@include respond-to(sm) {
@@ -658,7 +664,7 @@
 		}
 	}
 	p {
-		color: #343434; font-family: $HNC-Roman; font-size: 17px; letter-spacing: 0.14px; line-height: 29px;
+		color: #343434; font-family: $main-Regular; font-size: 17px; letter-spacing: -0.25px; line-height: 29px;
 		padding-left: 61px; margin-bottom: 25px;
 		@include respond-to(md) {
 			font-size: 14px; line-height: 27px; letter-spacing: 0.2px;
@@ -675,7 +681,7 @@
 
 // testimonials
 .testimonials {
-	position: relative; padding: 234px 0 104px; height: 552px;
+	position: relative; padding: 234px 0 104px; height: 570px;
 	background: #ffffff;
 	@include respond-to(md) {
 		padding: 116px 0 104px;
@@ -685,8 +691,11 @@
 	}
 	&:before {
 		content: '';
-		display: block; width: 32px; height: 25px; position: absolute; left: 50%; top: 50px; transform: translateX(-50%);
+		display: block; width: 32px; height: 25px; position: absolute; left: 50%; top: 121px; transform: translateX(-50%);
 		background: url('../img/quotes.png') center center no-repeat;
+		@include respond-to(md) {
+			top: 50px;
+		}
 	}
 	ul {
 		&.items {
@@ -729,12 +738,12 @@
 						width: 100%; padding: 0 15px;
 					}
 					& > p {
-						color: #333333; font-family: $SF-Display; font-size: 31px; font-weight: 400; line-height: 43px; letter-spacing: -0.1px; text-align: center;
+						color: #333333; font-family: $main-Light; font-size: 31px; font-weight: 400; line-height: 43px; letter-spacing: -0.5px; text-align: center;
 						transform: translateX(150px);
 						opacity: 0;
 						transition: 0.5s ease-out;
 						@include respond-to(md) {
-							font-size: 16px; line-height: 24px; font-family: $HNC-Roman; letter-spacing: 0.15px;
+							font-size: 16px; line-height: 24px; letter-spacing: 0.15px;
 							height: 130px;
 						}
 						@include respond-to(sm) {
@@ -748,20 +757,22 @@
 						}
 					}
 					footer {
-						margin-top: 47px;
+						margin-top: 90px; position: relative;
 						opacity: 0;
 						transition: 0.5s ease-out;
 						@include respond-to(sm) {
 							width: 60%; margin: 47px auto 0;
 						}
 						&:before {
-							content: none;
+							content: '';
+							position: absolute; left: 50%; top: -50px; transform: translateX(-50%); width: 100px; height: 1px;
+							background: #f3f3f3;
 						}
 						cite {
 							display: block;
 							p {
-								color: #333333; font-family: $HNC-Roman; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
-								margin-bottom: 4px;
+								color: #333333; font-family: $main-MdEx; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
+								margin-bottom: 5px;
 								@include respond-to(md) {
 									margin-bottom: 11px;
 								}
@@ -776,7 +787,7 @@
 								}
 							}
 							span {
-								color: #333333; font-family: $HNC-Roman; font-size: 14px; line-height: 16px; letter-spacing: 0.2px;
+								color: #333333; font-family: $main-Light; font-size: 14px; line-height: 16px; letter-spacing: 0.2px;
 							}
 						}
 					}
@@ -829,7 +840,7 @@
 					}
 				}
 				span {
-					color: #333333; font-family: $HNC-Roman; font-size: 17px; letter-spacing: -0.07px; line-height: 23px;
+					color: #333333; font-family: $main-Light; font-size: 17px; letter-spacing: -0.07px; line-height: 23px;
 					position: absolute; left: 50%; top: calc(100% + 30px); transform: translateX(-50%); width: 100%;
 					opacity: 0; pointer-events: none; transition: opacity 0.3s ease-out;
 				}
@@ -864,8 +875,8 @@
 				}
 			}
 			h3 {
-				color: #333333; font-family: $SF-Display; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
-				margin-bottom: 112px;
+				color: #333333; font-family: $main-MdEx; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
+				margin-bottom: 113px;
 				@include respond-to (1440px) {
 					margin-bottom: 62px	
 				}
@@ -888,7 +899,7 @@
 					float: left;
 				}
 				dt {
-					color: #909090; font-family: $HNC-Roman; font-size: 14px; font-weight: 400; line-height: 29px;
+					color: #909090; font-family: $main-Light; font-size: 14px; font-weight: 400; line-height: 29px;
 					width: 100px;
 					@include respond-to (md) {
 						font-size: 12px;
@@ -896,7 +907,7 @@
 					}
 				}
 				dd {
-					color: #333333; font-family: $HNC-Roman; font-size: 17px; letter-spacing: -0.07px; line-height: 29px;
+					color: #333333; font-family: $main-Light; font-size: 17px; letter-spacing: -0.07px; line-height: 29px;
 					width: calc(100% - 100px); margin-bottom: 25px;
 					@include respond-to (md) {
 						font-size: 14px; line-height: 27px;
@@ -904,7 +915,7 @@
 					}
 
 					&:last-child {
-						margin-bottom: 0; position: relative; top: -10px;
+						margin-bottom: 0; position: relative; top: -8px;
 						@include respond-to (md) {
 							top: 15px;
 						}
@@ -916,7 +927,7 @@
 
 					}
 					a {
-						color: #909090; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+						color: #909090; font-size: 14px; letter-spacing: 2.2px; text-transform: uppercase;
 					}
 					br {
 						@include respond-to(sm) {
@@ -974,16 +985,16 @@
 
 // footer
 .footer {
-	padding: 60px 40px 40px;
+	padding: 57px 40px 29px;
 	background-color: #3c3d41;
 	@include respond-to (1440px) {
-		padding: 40px 30px 40px;
+		padding: 40px 30px 29px;
 	}
 	@include respond-to (md) {
-		padding: 30px 20px 40px;
+		padding: 30px 20px 29px;
 	}
 	@include respond-to(sm) {
-		padding: 28px 20px 40px;
+		padding: 28px 20px 29px;
 	}
 
 	.col-sm-6 {
@@ -996,13 +1007,18 @@
 	}
 	
 	p {
-		color:#ffffff; font-family: $HNC-Roman; font-size: 12px; letter-spacing: 0.6px;
-		@include respond-to (md)  {
-			margin-bottom: 29px;
+		a {
+			color:#ffffff; font-family: $main-MdEx; font-size: 12px; letter-spacing: 0.6px;
+			@include respond-to (md)  {
+				margin-bottom: 29px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	h3 {
-		font-family: $HNC-Roman; line-height: 0.6;
+		font-family: $main-Ext; line-height: 0.6;
 		margin-top: 0; margin-bottom: 10px;
 		@include respond-to (md) {
 			margin-bottom: 30px;
@@ -1013,7 +1029,7 @@
 		}
 
 		a{
-			color: #ffffff; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; line-height: 15px;
+			color: #ffffff; font-size: 12px; letter-spacing: 1.35px; text-transform: uppercase; line-height: 15px;
 			display: inline-block;
 			opacity: 0.2;
 			transition: opacity 0.2s ease-out;
@@ -1050,7 +1066,7 @@
 			}
 		}
 		&:nth-of-type(3) {
-			margin-top: 18px;
+			margin-top: 30px; margin-bottom: 34px;
 			@include respond-to (md) {
 				margin-bottom: 40px;
 			}
@@ -1061,7 +1077,7 @@
 	}
 
 	ul {
-		margin: 20px 0 55px;
+		margin: 16px 0 57px;
 		@include respond-to (md) {
 			margin: 0 0 40px;
 		}
@@ -1071,7 +1087,7 @@
 		li{
 			margin-bottom: 10px;
 			a{
-				color: #ffffff; font-family: $HNC-Roman; font-size: 15px; letter-spacing: -0.07px;
+				color: #ffffff; font-family: $main-Light; font-size: 15px; letter-spacing: -0.07px;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -1088,6 +1104,7 @@
 		}
 		small {
 			color: #909090; font-family: $HNC-Roman; font-size: 14px;
+			padding-top: 5px;
 			@include respond-to(sm) {
 				text-align: center;
 			}
