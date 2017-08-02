@@ -10901,26 +10901,65 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+        @media (max-width: 480px) {
+          .menu.active ul.socials li:nth-child(1) {
+            -webkit-transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99); } }
       .menu.active ul.socials li:nth-child(2) {
         -webkit-transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.9s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+        @media (max-width: 480px) {
+          .menu.active ul.socials li:nth-child(2) {
+            -webkit-transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99); } }
       .menu.active ul.socials li:nth-child(3) {
         -webkit-transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+        @media (max-width: 480px) {
+          .menu.active ul.socials li:nth-child(3) {
+            -webkit-transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99); } }
       .menu.active ul.socials li:nth-child(4) {
         -webkit-transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.1s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+        @media (max-width: 480px) {
+          .menu.active ul.socials li:nth-child(4) {
+            -webkit-transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99); } }
       .menu.active ul.socials li:nth-child(5) {
         -webkit-transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.2s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+        @media (max-width: 480px) {
+          .menu.active ul.socials li:nth-child(5) {
+            -webkit-transition: opacity 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+            transition: opacity 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 1.3s cubic-bezier(0.17, 0.67, 0.44, 0.99); } }
+    .menu.active a.phone {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+      transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+      transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99);
+      transition: opacity 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.8s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
   .menu a.phone {
     color: #343434;
     font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
@@ -10930,7 +10969,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     text-transform: uppercase;
     text-align: center;
     display: none;
-    margin-bottom: 23px; }
+    margin-bottom: 23px;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
     @media (max-width: 480px) {
       .menu a.phone {
         display: block; } }
@@ -10965,7 +11012,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           margin-bottom: 0; } }
       .menu ul.navigation li a {
         color: #333333;
-        font-family: "SFNS-Display", sans-serif;
+        font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
         font-size: 40px;
         font-weight: 400;
         line-height: 84px;
@@ -11301,15 +11348,23 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           left: 20px;
           top: 20px;
           max-width: 200px; } }
+      @media (max-width: 480px) {
+        .services ul li h2 {
+          left: 15px; } }
     .services ul li div.info {
-      padding: 0 66px;
+      padding: 200px 66px 0;
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      z-index: 5;
-      padding-top: 200px; }
+      z-index: 5; }
+      @media (max-width: 991px) {
+        .services ul li div.info {
+          padding: 75px 20px 0; } }
+      @media (max-width: 480px) {
+        .services ul li div.info {
+          padding: 70px 15px 0; } }
       .services ul li div.info:after {
         content: '';
         display: block;
@@ -11341,6 +11396,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         line-height: 24px;
         letter-spacing: 0.7px;
         margin-bottom: 15px; }
+        @media (max-width: 991px) {
+          .services ul li div.info p {
+            font-size: 14px;
+            line-height: 18px; } }
+        @media (max-width: 480px) {
+          .services ul li div.info p {
+            display: none; } }
+        .services ul li div.info p.mobile {
+          display: none; }
+          @media (max-width: 480px) {
+            .services ul li div.info p.mobile {
+              display: block; } }
       .services ul li div.info a {
         color: #343434;
         font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
@@ -11350,6 +11417,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         text-transform: uppercase;
         letter-spacing: 1.3px;
         display: inline-block; }
+        @media (max-width: 991px) {
+          .services ul li div.info a {
+            font-size: 16px;
+            line-height: 24px; } }
     .services ul li img {
       position: relative; }
       @media (max-width: 1440px) {
@@ -12116,7 +12187,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     transition: transform 0.3s 0.3s linear, -webkit-transform 0.3s 0.3s linear; }
   .wr-menu.active {
     pointer-events: all;
-    overflow-y: auto; }
+    overflow-y: hidden; }
     .wr-menu.active::-webkit-scrollbar {
       width: 10px; }
     .wr-menu.active::-webkit-scrollbar-thumb {

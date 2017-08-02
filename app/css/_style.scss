@@ -30,7 +30,7 @@
 			transition: transform 0.3s 0.3s linear;
 		}
 		&.active {
-			pointer-events: all; overflow-y: auto;
+			pointer-events: all; overflow-y: hidden;
 			&::-webkit-scrollbar {
 				width: 10px;
 			}
