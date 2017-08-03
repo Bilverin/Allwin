@@ -237,6 +237,12 @@
 							transition: opacity 0.3s 1.3s cubic-bezier(.17,.67,.44,.99), transform 0.3s 1.3s cubic-bezier(.17,.67,.44,.99);
 						}
 					}
+					&:nth-child(6) {
+						transition: opacity 0.3s 1.3s cubic-bezier(.17,.67,.44,.99), transform 0.3s 1.3s cubic-bezier(.17,.67,.44,.99);
+						@include respond-to(xs) {
+							transition: opacity 0.3s 1.4s cubic-bezier(.17,.67,.44,.99), transform 0.3s 1.4s cubic-bezier(.17,.67,.44,.99);
+						}
+					}
 				}
 			}
 		}
@@ -350,8 +356,11 @@
 						&.rss {
 							background: #fb7629;
 						}
-						&.insta {
-							background: #a835b5;
+						&.vk {
+							background: #4c75a3;
+						}
+						&.ok {
+							background: #eb722e;
 						}
 						&.gp {
 							background: #d44132;
@@ -1100,7 +1109,7 @@
 
 // footer
 .footer {
-	padding: 57px 40px 29px;
+	padding: 60px 40px 34px;
 	background-color: #3c3d41;
 	@include respond-to (1440px) {
 		padding: 40px 30px 29px;
@@ -1122,6 +1131,7 @@
 	}
 
 	p {
+		position: relative; top: -4px;
 		@include respond-to(md) {
 			margin-bottom: 21px;
 		}
@@ -1135,7 +1145,7 @@
 			}
 		}
 	}
-	h3 {
+	h3, h4 {
 		font-family: $main-Ext; line-height: 0.6;
 		margin-top: 0; margin-bottom: 10px;
 		@include respond-to (md) {
@@ -1161,15 +1171,18 @@
 			}
 		}
 	}
+	h4 {
+		margin-bottom: 20px;
+	}
 	.footer-devider {
-		margin-top: 0; margin-bottom: 40px;
+		margin-top: 2px; margin-bottom: 40px;
 		border: 1px solid #f3f3f3; opacity: 0.2;
 		@include respond-to (md) {
 			margin-top: 25px; margin-bottom: 18px;
 		}
 
 		&:nth-of-type(1) {
-			margin-top: 52px;
+			margin-top: 50px;
 			@include respond-to (md) {
 				margin-top: 25px;
 			}
@@ -1184,7 +1197,7 @@
 			}
 		}
 		&:nth-of-type(3) {
-			margin-top: 30px; margin-bottom: 34px;
+			margin-top: 20px; margin-bottom: 34px;
 			@include respond-to (md) {
 				margin-bottom: 40px; margin-top: 25px;
 			}
@@ -1275,8 +1288,11 @@
 						&.rss {
 							background: #fb7629;
 						}
-						&.insta {
-							background: #a835b5;
+						&.vk {
+							background: #4c75a3;
+						}
+						&.ok {
+							background: #eb722e;
 						}
 						&.gp {
 							background: #d44132;
