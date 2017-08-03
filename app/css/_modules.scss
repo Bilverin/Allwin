@@ -582,7 +582,7 @@
 				position: relative;
 				@include respond-to(1440px) {
 					left: 50%; transform: translateX(-50%);
-				} 
+				}
 				@include respond-to(md) {
 					height: 229px;
 				}
@@ -868,7 +868,31 @@
 	}
 }
 
-// partners 
+// Testimonial's dots
+.testi-dots {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 100%;
+	margin: 15px 0;
+	font-size: 0;
+	text-align: center;
+	.testi-dot {
+		display: inline-block;
+		margin: 0 4px;
+		width: 14px;
+		height: 14px;
+		cursor: pointer;
+		border-radius: 50%;
+		background-color: #505050;
+		transition: background ease-out 0.3s;
+		&.active, &:hover {
+			background-color: #808080;
+		}
+	}
+}
+
+// partners
 .partners {
 	padding-top: 75px;
 	@include respond-to(md) {
@@ -909,7 +933,7 @@
 				width: 100%;
 			}
 
-			
+
 			&:first-child {
 				padding: 34px 60px 0 40px;
 
@@ -924,7 +948,7 @@
 				color: #333333; font-family: $main-MdEx; font-size: 20px; font-weight: 400; letter-spacing: 1.4px; line-height: 36px; text-transform: uppercase;
 				margin-bottom: 113px;
 				@include respond-to (1440px) {
-					margin-bottom: 62px	
+					margin-bottom: 62px
 				}
 
 				@include respond-to (md) {
@@ -1051,7 +1075,7 @@
 			width: 100%; float: none;
 		}
 	}
-	
+
 	p {
 		a {
 			color:#ffffff; font-family: $main-MdEx; font-size: 12px; letter-spacing: 0.6px;
@@ -1093,9 +1117,9 @@
 		margin-top: 0; margin-bottom: 40px;
 		border: 1px solid #f3f3f3; opacity: 0.2;
 		@include respond-to (md) {
-			margin-top: 0px; margin-bottom: 20px; 
+			margin-top: 0px; margin-bottom: 20px;
 		}
-		
+
 		&:nth-of-type(1) {
 			margin-top: 52px;
 			@include respond-to (md) {
@@ -1211,5 +1235,5 @@
 				}
 			}
 		}
-	}	
+	}
 }
