@@ -61,7 +61,7 @@ $(document).ready(function() {
 	});
 
 	// Special effects for desktop version
-	if ($(window).width() >= 768) {
+	if ($(window).width() > 1024) {
 		var s = skrollr.init();
 		new WOW().init();
 	}
@@ -142,17 +142,40 @@ $(document).ready(function() {
 			}
 		});
 
-		$(app).resize(function () {
-			if ($(app).width() >= 768) {
-				$('.testi-dots').hide();
-			} else {
-				$('.testi-dots').show();
-			}
-		});
-
-		$(app).resize();
-
 	})(window); // END OF UNIT: Testimonials
+
+	// scroll menu
+	var header = $(".js-header"),
+		scrollPrev = 0
+	
+	$(window).scroll(function() {
+		var scrolled = $(window).scrollTop(),
+			firstScrollUp = false,
+			firstScrollDown = false;
+		
+		if ( scrolled > 0 ) {
+			if ( scrolled > scrollPrev ) {
+				firstScrollUp = false;
+				if ( scrolled < header.height() + header.offset().top ) {
+					if ( firstScrollDown === false ) {
+						header.removeClass('active');
+						firstScrollDown = true;
+					}
+				} else {
+					header.removeClass('active');
+				}
+			} else {
+				firstScrollDown = false;
+				if ( scrolled > header.offset().top ) {
+					if ( firstScrollUp === false ) {
+						header.addClass('active');
+						firstScrollUp = true;
+					};
+				}
+			}
+			scrollPrev = scrolled;
+		}	
+	});
 
 });
 

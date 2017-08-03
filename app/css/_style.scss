@@ -8,6 +8,14 @@
 			padding: 15px 0;
 		}
 
+		&, &-bg {
+			transform: translateY(-100%);
+			transition: transform 0.3s ease-out;
+			&.active {
+				transform: translateY(0%);
+			}
+		}
+
 		&-bg {
 			position: fixed; z-index: 50; height: 130px; width: 100%; top: 0; left: 0;
 			background: #f3f3f3;
@@ -67,7 +75,7 @@
 		&-intro {
 			padding: 128px 0 290px; position: relative;
 			@include respond-to(md) {
-				padding: 231px 0 362px;
+				padding: 239px 0 364px;
 			}
 			@include respond-to(sm) {
 				padding: 130px 0 360px;
@@ -114,7 +122,7 @@
 		&-partners {
 			padding: 67px 0 172px;
 			@include respond-to(md) {
-				padding: 67px 0 152px;
+				padding: 67px 0 110px;
 			}
 			@include respond-to(xs) {
 				padding: 67px 0 82px;
@@ -124,7 +132,7 @@
 		&-contacts {
 			padding: 0 0 128px;
 			@include respond-to(md) {
-				padding: 0 0 117px;
+				padding: 0 0 120px;
 			}
 		}
 		

@@ -91,6 +91,20 @@
 				@include respond-to(xs) {
 					display: none;
 				}
+				a {
+					position: relative;
+					&:after {
+						content: '';
+						display: block; width: 0%; height: 2px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+						background: $mc-1;
+						transition: 0.3s ease-out;
+					}
+					&:hover {
+						&:after {
+							width: 100%;
+						}
+					}
+				}
 			}
 			&:last-child {
 				margin-right: 0;
@@ -159,6 +173,7 @@
 
 // menu
 .menu {
+	text-align: center;
 	position: relative; z-index: 5;
 	pointer-events: none;
 	opacity: 0;
@@ -226,7 +241,7 @@
 			}
 		}
 		a.phone {
-			transform: translateY(0);
+			transform: translateY(0); position: relative;
 			opacity: 1;
 			transition: opacity 0.3s 0.8s cubic-bezier(.17,.67,.44,.99), transform 0.3s 0.8s cubic-bezier(.17,.67,.44,.99);
 		}
@@ -238,7 +253,18 @@
 		opacity: 0;
 		transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 		@include respond-to(xs) {
-			display: block;
+			display: inline-block;
+		}
+		&:after {
+			content: '';
+			display: block; width: 0%; height: 2px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+			background: $mc-1;
+			transition: 0.3s ease-out;
+		}
+		&:hover {
+			&:after {
+				width: 100%;
+			}
 		}
 	}
 
@@ -267,7 +293,6 @@
 					display: inline-block; position: relative;
 					@include respond-to(sm) {
 						font-size: 20px; letter-spacing: 1.25px; line-height: 54px;
-						width: 290px;
 					}
 					&:hover {
 						&:after {
@@ -537,7 +562,7 @@
 				}
 			}
 			div.info {
-				padding: 200px 66px 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5;
+				padding: 200px 44px 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5;
 				@include respond-to(md) {
 					padding: 75px 20px 0;
 				}
@@ -572,9 +597,23 @@
 				}
 				a {
 					color: $mc-1; font-family: $main-MdEx; font-size: 20px; font-weight: 400; line-height: 36px; text-transform: uppercase; letter-spacing: 1.3px;
-					display: inline-block;
+					display: inline-block; position: relative;
 					@include respond-to(md) {
 						font-size: 16px; line-height: 24px;
+					}
+					&:after {
+						content: '';
+						display: block; width: 0%; height: 4px; position: absolute; left: 50%; bottom: 0px; transform: translateX(-50%);
+						background: $mc-1;
+						transition: 0.3s ease-out;
+						@include respond-to(sm) {
+							height: 2px;
+						}
+					}
+					&:hover {
+						&:after {
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -713,7 +752,7 @@
 		color: #343434; font-family: $main-Regular; font-size: 17px; letter-spacing: -0.25px; line-height: 29px;
 		padding-left: 61px; margin-bottom: 25px;
 		@include respond-to(md) {
-			font-size: 14px; line-height: 27px; letter-spacing: 0.2px;
+			font-size: 14px; line-height: 27px;
 			padding-left: 48px;
 		}
 		@include respond-to(sm) {
@@ -730,10 +769,10 @@
 	position: relative; padding: 234px 0 104px; height: 570px;
 	background: #ffffff;
 	@include respond-to(md) {
-		padding: 116px 0 104px;
+		padding: 116px 0 0; height: 442px;
 	}
 	@include respond-to(sm) {
-		padding: 116px 0 88px;
+		padding: 116px 0 88px; height: 485px;
 	}
 	&:before {
 		content: '';
@@ -789,8 +828,8 @@
 						opacity: 0;
 						transition: 0.5s ease-out;
 						@include respond-to(md) {
-							font-size: 16px; line-height: 24px; letter-spacing: 0.15px;
-							height: 130px;
+							font-size: 16px; line-height: 24px; letter-spacing: 0px;
+							height: 86px;
 						}
 						@include respond-to(sm) {
 							height: 156px;
@@ -840,54 +879,60 @@
 				}
 			}
 		}
-		&.testi-nav {
-			width: 100%; position: absolute; left: 0; padding: 0 120px; top: 290px; display: flex; justify-content: space-between;
-			li {
-				a {
-					display: inline-block;
-					transition: 0.3s ease-out;
-					&.nav {
-						&-left {
-							&:hover {
-								transform: translateX(-10px);
+		&.testi {
+			&-nav {
+				width: 100%; position: absolute; left: 0; padding: 0 120px; top: 290px; display: flex; justify-content: space-between;
+				@include respond-to(md) {
+					display: none;
+				}
+				li {
+					a {
+						display: inline-block;
+						transition: 0.3s ease-out;
+						&.nav {
+							&-left {
+								&:hover {
+									transform: translateX(-10px);
+								}
+							}
+							&-right {
+								&:hover {
+									transform: translateX(10px);
+								}
 							}
 						}
-						&-right {
-							&:hover {
-								transform: translateX(10px);
-							}
+						&.inactive {
+							pointer-events: none;
+							opacity: 0.2;
 						}
-					}
-					&.inactive {
-						pointer-events: none;
-						opacity: 0.2;
 					}
 				}
 			}
-		}
-	}
-}
-
-// Testimonial's dots
-.testi-dots {
-	position: absolute;
-	bottom: 50px;
-	left: 0;
-	width: 100%;
-	margin: 15px 0;
-	font-size: 0;
-	text-align: center;
-	.testi-dot {
-		display: inline-block;
-		margin: 0 4px;
-		width: 14px;
-		height: 14px;
-		cursor: pointer;
-		border-radius: 50%;
-		background-color: #505050;
-		transition: background ease-out 0.3s;
-		&.active, &:hover {
-			background-color: #808080;
+			&-dots {
+				font-size: 0; text-align: center;
+				display: none; position: absolute; bottom: 44px; left: 0; width: 100%; margin: 0;
+				@include respond-to(md) {
+					display: block;
+				}
+				li {
+					display: inline-block; margin: 0 5px; width: 8px; height: 8px; vertical-align: middle; position: relative;
+					cursor: pointer;
+					
+					&:after {
+						content: '';
+						display: block; width: 4px; height: 4px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+						background-color: #3c3d41; border-radius: 50%;
+						opacity: 0.2; 
+						transition: ease-out 0.3s;
+					}
+					&.active, &:hover {
+						&:after {
+							width: 8px; height: 8px;
+							opacity: 1;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -896,7 +941,7 @@
 .partners {
 	padding-top: 75px;
 	@include respond-to(md) {
-		padding-top: 40px;
+		padding-top: 54px;
 	}
 	ul {
 		li {
@@ -938,7 +983,7 @@
 				padding: 34px 60px 0 40px;
 
 				@include respond-to (md) {
-					padding: 20px 20px;
+					padding: 14px 20px;
 				}
 				@include respond-to(sm) {
 					padding: 15px 20px 32px;
@@ -987,7 +1032,7 @@
 					&:last-child {
 						margin-bottom: 0; position: relative; top: -8px;
 						@include respond-to (md) {
-							top: 15px;
+							top: 17px; left: 8px;
 						}
 
 						@include respond-to (767px) {
@@ -1061,7 +1106,7 @@
 		padding: 40px 30px 29px;
 	}
 	@include respond-to (md) {
-		padding: 30px 20px 29px;
+		padding: 27px 20px 29px;
 	}
 	@include respond-to(sm) {
 		padding: 28px 20px 29px;
@@ -1077,6 +1122,9 @@
 	}
 
 	p {
+		@include respond-to(md) {
+			margin-bottom: 21px;
+		}
 		a {
 			color:#ffffff; font-family: $main-MdEx; font-size: 12px; letter-spacing: 0.6px;
 			@include respond-to (md)  {
@@ -1091,7 +1139,7 @@
 		font-family: $main-Ext; line-height: 0.6;
 		margin-top: 0; margin-bottom: 10px;
 		@include respond-to (md) {
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 		}
 		@include respond-to(xs) {
 			line-height: 1;
@@ -1117,13 +1165,13 @@
 		margin-top: 0; margin-bottom: 40px;
 		border: 1px solid #f3f3f3; opacity: 0.2;
 		@include respond-to (md) {
-			margin-top: 0px; margin-bottom: 20px;
+			margin-top: 25px; margin-bottom: 18px;
 		}
 
 		&:nth-of-type(1) {
 			margin-top: 52px;
 			@include respond-to (md) {
-				margin-top: 15px;
+				margin-top: 25px;
 			}
 			@include respond-to (xs) {
 				margin-top: 10px;
@@ -1138,7 +1186,7 @@
 		&:nth-of-type(3) {
 			margin-top: 30px; margin-bottom: 34px;
 			@include respond-to (md) {
-				margin-bottom: 40px;
+				margin-bottom: 40px; margin-top: 25px;
 			}
 			@include respond-to(xs) {
 				margin-top: 21px;
@@ -1175,13 +1223,18 @@
 		small {
 			color: #909090; font-family: $HNC-Roman; font-size: 14px;
 			padding-top: 5px;
+			@include respond-to(md) {
+				padding-top: 0;
+			}
 			@include respond-to(sm) {
 				text-align: center;
 			}
 		}
 		ul.socials {
-			margin: 0;
-
+			margin: 0; height: 30px;
+			@include respond-to(md) {
+				position: relative; top: -5px;
+			}
 			@include respond-to (sm) {
 				text-align: center;
 				top:0;
@@ -1194,7 +1247,7 @@
 			li {
 				display: inline-block; margin-left: 25px; margin-bottom: 0;
 				@include respond-to (md) {
-					margin-left: 40px;
+					margin-left: 20px;
 				}
 				@include respond-to(xs) {
 					margin-left: 0;
