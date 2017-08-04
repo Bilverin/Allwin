@@ -60,8 +60,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// Special effects for desktop version
-	if ($(window).width() > 1024) {
+	if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		var s = skrollr.init();
 		new WOW().init();
 	}
@@ -142,17 +141,27 @@ $(document).ready(function() {
 			}
 		});
 
+		$('.testimonials').swipe({
+			swipe: function (event, direction) {
+				if (direction === 'left' && currentItem < itemsCount - 1) {
+					goToItem(currentItem + 1);
+				} else if (direction === 'right' && currentItem > 0) {
+					goToItem(currentItem - 1);
+				}
+			}
+		});
+
 	})(window); // END OF UNIT: Testimonials
 
 	// scroll menu
 	var header = $(".js-header"),
 		scrollPrev = 0
-	
+
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop(),
 			firstScrollUp = false,
 			firstScrollDown = false;
-		
+
 		if ( scrolled > 0 ) {
 			if ( scrolled > scrollPrev ) {
 				firstScrollUp = false;
@@ -174,7 +183,7 @@ $(document).ready(function() {
 				}
 			}
 			scrollPrev = scrolled;
-		}	
+		}
 	});
 
 });

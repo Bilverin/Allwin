@@ -11690,10 +11690,30 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
         transform: translateX(-150px); }
+        @media (max-width: 767px) {
+          .testimonials ul.items li.left blockquote > p {
+            -webkit-transform: translateX(-75px);
+            -ms-transform: translateX(-75px);
+            transform: translateX(-75px); } }
+        @media (max-width: 480px) {
+          .testimonials ul.items li.left blockquote > p {
+            -webkit-transform: translateX(-30px);
+            -ms-transform: translateX(-30px);
+            transform: translateX(-30px); } }
       .testimonials ul.items li.right blockquote > p {
         -webkit-transform: translateX(150px);
         -ms-transform: translateX(150px);
         transform: translateX(150px); }
+        @media (max-width: 767px) {
+          .testimonials ul.items li.right blockquote > p {
+            -webkit-transform: translateX(75px);
+            -ms-transform: translateX(75px);
+            transform: translateX(75px); } }
+        @media (max-width: 480px) {
+          .testimonials ul.items li.right blockquote > p {
+            -webkit-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            transform: translateX(30px); } }
       .testimonials ul.items li blockquote {
         font-size: inherit;
         text-align: center;
@@ -12095,7 +12115,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .footer h3, .footer h4 {
         line-height: 1;
         margin-bottom: 18px; } }
-    .footer h3 a, .footer h4 a {
+    .footer h3 span, .footer h3 a, .footer h4 span, .footer h4 a {
       color: #ffffff;
       font-size: 12px;
       letter-spacing: 1.35px;
@@ -12105,11 +12125,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       opacity: 0.2;
       -webkit-transition: opacity 0.2s ease-out;
       transition: opacity 0.2s ease-out; }
-      .footer h3 a:hover, .footer h4 a:hover {
+      .footer h3 span:hover, .footer h3 a:hover, .footer h4 span:hover, .footer h4 a:hover {
         opacity: 0.7; }
       @media (max-width: 480px) {
-        .footer h3 a br, .footer h4 a br {
+        .footer h3 span br, .footer h3 a br, .footer h4 span br, .footer h4 a br {
           display: none; } }
+    .footer h3 span:hover, .footer h4 span:hover {
+      opacity: 0.2; }
   .footer h4 {
     margin-bottom: 20px; }
   .footer .footer-devider {

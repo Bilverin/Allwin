@@ -812,6 +812,12 @@
 					blockquote {
 						& > p {
 							transform: translateX(-150px);
+							@include respond-to(sm) {
+								transform: translateX(-75px);
+							}
+							@include respond-to(xs) {
+								transform: translateX(-30px);
+							}
 						}
 					}
 				}
@@ -819,6 +825,12 @@
 					blockquote {
 						& > p {
 							transform: translateX(150px);
+							@include respond-to(sm) {
+								transform: translateX(75px);
+							}
+							@include respond-to(xs) {
+								transform: translateX(30px);
+							}
 						}
 					}
 				}
@@ -1156,7 +1168,7 @@
 			margin-bottom: 18px;
 		}
 
-		a{
+		span, a{
 			color: #ffffff; font-size: 12px; letter-spacing: 1.35px; text-transform: uppercase; line-height: 15px;
 			display: inline-block;
 			opacity: 0.2;
@@ -1168,6 +1180,11 @@
 				@include respond-to(xs) {
 					display: none;
 				}
+			}
+		}
+		span {
+			&:hover {
+				opacity: 0.2;
 			}
 		}
 	}
