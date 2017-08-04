@@ -142,15 +142,15 @@ $(document).ready(function() {
 			}
 		});
 
-		$(app).resize(function () {
-			if ($(app).width() >= 768) {
-				$('.testi-dots').hide();
-			} else {
-				$('.testi-dots').show();
+		$('.testimonials').swipe({
+			swipe: function (event, direction) {
+				if (direction === 'left' && currentItem < itemsCount - 1) {
+					goToItem(currentItem + 1);
+				} else if (direction === 'right' && currentItem > 0) {
+					goToItem(currentItem - 1);
+				}
 			}
 		});
-
-		$(app).resize();
 
 	})(window); // END OF UNIT: Testimonials
 
