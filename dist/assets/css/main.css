@@ -11890,8 +11890,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     text-align: center;
     padding-bottom: 80px; }
     .partners ul li a {
+      text-align: center;
       display: inline-block;
-      position: relative; }
+      position: relative;
+      width: 100%; }
+      .partners ul li a img {
+        max-width: 80%;
+        width: auto !important;
+        display: inline-block !important; }
       .partners ul li a:hover span {
         opacity: 1;
         pointer-events: all; }
@@ -11908,11 +11914,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
-        width: 100%;
+        width: 80%;
         opacity: 0;
         pointer-events: none;
         -webkit-transition: opacity 0.3s ease-out;
         transition: opacity 0.3s ease-out; }
+  .partners .owl-carousel .owl-stage {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .contacts ul {
   display: -webkit-box;

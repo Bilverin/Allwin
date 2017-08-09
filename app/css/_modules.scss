@@ -969,7 +969,11 @@
 			text-align: center;
 			padding-bottom: 80px;
 			a {
-				display: inline-block; position: relative;
+				text-align: center;
+				display: inline-block; position: relative; width: 100%;
+				img {
+					max-width: 80%; width: auto !important; display: inline-block !important;
+				}
 				&:hover {
 					span {
 						opacity: 1; pointer-events: all;
@@ -977,10 +981,15 @@
 				}
 				span {
 					color: #333333; font-family: $main-Light; font-size: 17px; letter-spacing: -0.07px; line-height: 23px;
-					position: absolute; left: 50%; top: calc(100% + 30px); transform: translateX(-50%); width: 100%;
+					position: absolute; left: 50%; top: calc(100% + 30px); transform: translateX(-50%); width: 80%;
 					opacity: 0; pointer-events: none; transition: opacity 0.3s ease-out;
 				}
 			}
+		}
+	}
+	.owl-carousel {
+		.owl-stage {
+			display: flex; float: none; align-items: center;
 		}
 	}
 }
