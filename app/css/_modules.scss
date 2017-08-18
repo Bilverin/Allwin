@@ -204,6 +204,8 @@
 				}
 			}
 			&.socials {
+				@media (min-height: 650px) {width: 100%; position: fixed; left: 0; bottom: 30px;}
+
 				li {
 					transform: translateY(0);
 					opacity: 1;
@@ -276,9 +278,9 @@
 
 	ul {
 		&.navigation {
-			width: 500px; margin: 0 auto 139px; padding-top: 179px;
+			width: 500px; margin: 0 auto; padding-top: 12%;
 			@include respond-to(md) {
-				padding-top: 219px; margin: 0 auto 259px;
+				padding-top: 20%; margin: 0 auto 259px;
 			}
 			@include respond-to(sm) {
 				width: auto; padding-top: 106px; margin: 0 auto 80px;
@@ -571,7 +573,11 @@
 				}
 			}
 			div.info {
-				padding: 200px 44px 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5;
+				padding: 274px 44px 0; position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; z-index: 5;
+				@media (max-width: 1439px) {padding: 250px 44px 0;}
+				@include respond-to(lg) {
+					padding: 235px 30px 0;
+				}
 				@include respond-to(md) {
 					padding: 75px 20px 0;
 				}
@@ -975,9 +981,7 @@
 					max-width: 80%; width: auto !important; display: inline-block !important;
 				}
 				&:hover {
-					span {
-						opacity: 1; pointer-events: all;
-					}
+					span {opacity: 1; pointer-events: all;}
 				}
 				span {
 					color: #333333; font-family: $main-Light; font-size: 17px; letter-spacing: -0.07px; line-height: 23px;
@@ -990,6 +994,17 @@
 	.owl-carousel {
 		.owl-stage {
 			display: flex; float: none; align-items: center;
+
+			.owl-item {
+				a {
+					img {width: auto; height: 64px; filter: grayscale(100%);}
+					&:hover {
+						img {filter: grayscale(0);}
+						cursor: pointer;
+					}
+				}
+				
+			}
 		}
 	}
 }
@@ -1244,7 +1259,7 @@
 		li{
 			margin-bottom: 10px;
 			a{
-				color: #ffffff; font-family: $main-Light; font-size: 15px; letter-spacing: -0.07px;
+				color: #ffffff; font-family: $main-Regular; font-size: 15px; letter-spacing: -0.07px;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -1271,6 +1286,7 @@
 		}
 		ul.socials {
 			margin: 0; height: 30px;
+
 			@include respond-to(md) {
 				position: relative; top: -5px;
 			}

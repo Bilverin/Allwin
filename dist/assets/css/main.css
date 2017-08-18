@@ -10530,6 +10530,72 @@ fieldset {
   margin: 0;
   padding: 0; }
 
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arrow-left {
+  background-image: url(../img/sprite.png);
+  background-position: -129px -86px;
+  width: 32px;
+  height: 24px; }
+
+.icon-arrow-right {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -129px;
+  width: 32px;
+  height: 24px; }
+
+.icon-car-md {
+  background-image: url(../img/sprite.png);
+  background-position: -57px -64px;
+  width: 44px;
+  height: 44px; }
+
+.icon-car {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 64px;
+  height: 64px; }
+
+.icon-ring-md {
+  background-image: url(../img/sprite.png);
+  background-position: -129px -43px;
+  width: 38px;
+  height: 43px; }
+
+.icon-ring {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -64px;
+  width: 57px;
+  height: 65px; }
+
+.icon-target-md {
+  background-image: url(../img/sprite.png);
+  background-position: -129px 0px;
+  width: 43px;
+  height: 43px; }
+
+.icon-target {
+  background-image: url(../img/sprite.png);
+  background-position: -64px 0px;
+  width: 65px;
+  height: 63px; }
+
 @font-face {
   font-family: SFNS-Display;
   src: url("../fonts/SFNS-Display/SFNS-Display.eot");
@@ -10844,6 +10910,12 @@ fieldset {
         transition: opacity 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99);
         transition: opacity 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99), transform 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99), -webkit-transform 0.3s 0.7s cubic-bezier(0.17, 0.67, 0.44, 0.99); }
+    @media (min-height: 650px) {
+      .menu.active ul.socials {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 30px; } }
     .menu.active ul.socials li {
       -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -10964,11 +11036,11 @@ fieldset {
       width: 100%; }
   .menu ul.navigation {
     width: 500px;
-    margin: 0 auto 139px;
-    padding-top: 179px; }
+    margin: 0 auto;
+    padding-top: 12%; }
     @media (max-width: 991px) {
       .menu ul.navigation {
-        padding-top: 219px;
+        padding-top: 20%;
         margin: 0 auto 259px; } }
     @media (max-width: 767px) {
       .menu ul.navigation {
@@ -11334,13 +11406,19 @@ fieldset {
         .services ul li h2 {
           left: 15px; } }
     .services ul li div.info {
-      padding: 200px 44px 0;
+      padding: 274px 44px 0;
       position: absolute;
       left: 0;
-      top: 0;
+      bottom: 0;
       width: 100%;
       height: 100%;
       z-index: 5; }
+      @media (max-width: 1439px) {
+        .services ul li div.info {
+          padding: 250px 44px 0; } }
+      @media (max-width: 1199px) {
+        .services ul li div.info {
+          padding: 235px 30px 0; } }
       @media (max-width: 991px) {
         .services ul li div.info {
           padding: 75px 20px 0; } }
@@ -11863,6 +11941,16 @@ fieldset {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    .partners .owl-carousel .owl-stage .owl-item a img {
+      width: auto;
+      height: 64px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
+    .partners .owl-carousel .owl-stage .owl-item a:hover {
+      cursor: pointer; }
+      .partners .owl-carousel .owl-stage .owl-item a:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0); }
 
 .contacts ul {
   display: -webkit-box;
@@ -12128,7 +12216,7 @@ fieldset {
       margin-bottom: 10px; }
       .footer ul li a {
         color: #ffffff;
-        font-family: "AkzidenzGroteskPro-Light", sans-serif;
+        font-family: "AkzidenzGroteskPro-Regular", sans-serif;
         font-size: 15px;
         letter-spacing: -0.07px; }
         .footer ul li a:hover {
