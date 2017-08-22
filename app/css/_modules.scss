@@ -405,6 +405,7 @@
 		@include respond-to(xs) {
 			right: 0; bottom: 0;
 		}
+		@media (max-height: 768px) {bottom: -168px;}
 		&.inactive {
 			.intro-img {
 				&-1, &-2 {

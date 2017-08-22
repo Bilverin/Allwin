@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11206,6 +11206,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .intro-img {
         right: 0;
         bottom: 0; } }
+    @media (max-height: 768px) {
+      .intro-img {
+        bottom: -168px; } }
     .intro-img.inactive .intro-img-1 img.mob.img-1, .intro-img.inactive .intro-img-1 img.mob.img-2, .intro-img.inactive .intro-img-1 img.mob.img-3, .intro-img.inactive .intro-img-1 img.mob.img-4, .intro-img.inactive .intro-img-1 img.mob.img-5, .intro-img.inactive .intro-img-1 img.mob.img-6, .intro-img.inactive .intro-img-1 img.mob.img-7, .intro-img.inactive .intro-img-1 img.mob.img-8, .intro-img.inactive .intro-img-1 img.mob.img-9, .intro-img.inactive .intro-img-1 img.mob.img-10, .intro-img.inactive .intro-img-1 img.mob.img-11, .intro-img.inactive .intro-img-1 img.mob.img-12, .intro-img.inactive .intro-img-1 img.mob.img-13, .intro-img.inactive .intro-img-1 img.img-1, .intro-img.inactive .intro-img-1 img.img-2, .intro-img.inactive .intro-img-1 img.img-3, .intro-img.inactive .intro-img-1 img.img-4, .intro-img.inactive .intro-img-1 img.img-5, .intro-img.inactive .intro-img-1 img.img-6, .intro-img.inactive .intro-img-1 img.img-7, .intro-img.inactive .intro-img-1 img.img-8, .intro-img.inactive .intro-img-1 img.img-9, .intro-img.inactive .intro-img-1 img.img-10, .intro-img.inactive .intro-img-1 img.img-11, .intro-img.inactive .intro-img-1 img.img-12, .intro-img.inactive .intro-img-1 img.img-13, .intro-img.inactive .intro-img-2 img.mob.img-1, .intro-img.inactive .intro-img-2 img.mob.img-2, .intro-img.inactive .intro-img-2 img.mob.img-3, .intro-img.inactive .intro-img-2 img.mob.img-4, .intro-img.inactive .intro-img-2 img.mob.img-5, .intro-img.inactive .intro-img-2 img.mob.img-6, .intro-img.inactive .intro-img-2 img.mob.img-7, .intro-img.inactive .intro-img-2 img.mob.img-8, .intro-img.inactive .intro-img-2 img.mob.img-9, .intro-img.inactive .intro-img-2 img.mob.img-10, .intro-img.inactive .intro-img-2 img.mob.img-11, .intro-img.inactive .intro-img-2 img.mob.img-12, .intro-img.inactive .intro-img-2 img.mob.img-13, .intro-img.inactive .intro-img-2 img.img-1, .intro-img.inactive .intro-img-2 img.img-2, .intro-img.inactive .intro-img-2 img.img-3, .intro-img.inactive .intro-img-2 img.img-4, .intro-img.inactive .intro-img-2 img.img-5, .intro-img.inactive .intro-img-2 img.img-6, .intro-img.inactive .intro-img-2 img.img-7, .intro-img.inactive .intro-img-2 img.img-8, .intro-img.inactive .intro-img-2 img.img-9, .intro-img.inactive .intro-img-2 img.img-10, .intro-img.inactive .intro-img-2 img.img-11, .intro-img.inactive .intro-img-2 img.img-12, .intro-img.inactive .intro-img-2 img.img-13 {
       bottom: 0; }
     .intro-img-1, .intro-img-2 {
@@ -12435,6 +12438,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     @media (max-width: 480px) {
       .app .wr-intro {
         padding: 26px 0 144px; } }
+    @media (max-height: 768px) {
+      .app .wr-intro {
+        padding: 128px 0 190px; } }
   .app .wr-services {
     padding-bottom: 200px; }
     @media (max-width: 991px) {

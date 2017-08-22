@@ -74,6 +74,7 @@
 		
 		&-intro {
 			padding: 128px 0 290px; position: relative;
+
 			@include respond-to(md) {
 				padding: 239px 0 364px;
 			}
@@ -83,6 +84,7 @@
 			@include respond-to(xs) {
 				padding: 26px 0 144px;
 			}
+			@media (max-height: 768px) {padding: 128px 0 190px;}
 		}
 
 		&-services {
