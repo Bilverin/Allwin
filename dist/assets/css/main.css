@@ -10732,6 +10732,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .section-header h3 {
       font-size: 16px;
       line-height: 24px; } }
+  @media (max-width: 767px) {
+    .section-header h3 {
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      letter-spacing: 1.12px;
+      text-transform: uppercase; } }
 
 .header {
   display: -webkit-box;
@@ -11178,7 +11183,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     color: #343434;
     font-family: "AkzidenzGroteskPro-Light", sans-serif;
     font-size: 52px;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 56px;
     letter-spacing: -0.2px; }
     @media (max-width: 1440px) {
@@ -11206,7 +11211,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .intro-img {
         right: 0;
         bottom: 0; } }
-    @media (max-height: 768px) {
+    @media (max-height: 768px) and (min-width: 1300px) {
       .intro-img {
         bottom: -168px; } }
     .intro-img.inactive .intro-img-1 img.mob.img-1, .intro-img.inactive .intro-img-1 img.mob.img-2, .intro-img.inactive .intro-img-1 img.mob.img-3, .intro-img.inactive .intro-img-1 img.mob.img-4, .intro-img.inactive .intro-img-1 img.mob.img-5, .intro-img.inactive .intro-img-1 img.mob.img-6, .intro-img.inactive .intro-img-1 img.mob.img-7, .intro-img.inactive .intro-img-1 img.mob.img-8, .intro-img.inactive .intro-img-1 img.mob.img-9, .intro-img.inactive .intro-img-1 img.mob.img-10, .intro-img.inactive .intro-img-1 img.mob.img-11, .intro-img.inactive .intro-img-1 img.mob.img-12, .intro-img.inactive .intro-img-1 img.mob.img-13, .intro-img.inactive .intro-img-1 img.img-1, .intro-img.inactive .intro-img-1 img.img-2, .intro-img.inactive .intro-img-1 img.img-3, .intro-img.inactive .intro-img-1 img.img-4, .intro-img.inactive .intro-img-1 img.img-5, .intro-img.inactive .intro-img-1 img.img-6, .intro-img.inactive .intro-img-1 img.img-7, .intro-img.inactive .intro-img-1 img.img-8, .intro-img.inactive .intro-img-1 img.img-9, .intro-img.inactive .intro-img-1 img.img-10, .intro-img.inactive .intro-img-1 img.img-11, .intro-img.inactive .intro-img-1 img.img-12, .intro-img.inactive .intro-img-1 img.img-13, .intro-img.inactive .intro-img-2 img.mob.img-1, .intro-img.inactive .intro-img-2 img.mob.img-2, .intro-img.inactive .intro-img-2 img.mob.img-3, .intro-img.inactive .intro-img-2 img.mob.img-4, .intro-img.inactive .intro-img-2 img.mob.img-5, .intro-img.inactive .intro-img-2 img.mob.img-6, .intro-img.inactive .intro-img-2 img.mob.img-7, .intro-img.inactive .intro-img-2 img.mob.img-8, .intro-img.inactive .intro-img-2 img.mob.img-9, .intro-img.inactive .intro-img-2 img.mob.img-10, .intro-img.inactive .intro-img-2 img.mob.img-11, .intro-img.inactive .intro-img-2 img.mob.img-12, .intro-img.inactive .intro-img-2 img.mob.img-13, .intro-img.inactive .intro-img-2 img.img-1, .intro-img.inactive .intro-img-2 img.img-2, .intro-img.inactive .intro-img-2 img.img-3, .intro-img.inactive .intro-img-2 img.img-4, .intro-img.inactive .intro-img-2 img.img-5, .intro-img.inactive .intro-img-2 img.img-6, .intro-img.inactive .intro-img-2 img.img-7, .intro-img.inactive .intro-img-2 img.img-8, .intro-img.inactive .intro-img-2 img.img-9, .intro-img.inactive .intro-img-2 img.img-10, .intro-img.inactive .intro-img-2 img.img-11, .intro-img.inactive .intro-img-2 img.img-12, .intro-img.inactive .intro-img-2 img.img-13 {
@@ -11367,9 +11372,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     width: 50%;
     position: relative;
     overflow: hidden; }
-    @media (max-width: 767px) {
-      .services ul li {
-        width: 100%; } }
     .services ul li:hover h2 {
       color: #343434; }
     .services ul li:hover div.info:after {
@@ -11408,6 +11410,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       @media (max-width: 480px) {
         .services ul li h2 {
           left: 15px; } }
+    @media (max-width: 767px) {
+      .services ul li {
+        width: 100%; }
+        .services ul li h2 {
+          display: none; } }
+    .services ul li h2.mobile-title {
+      display: none; }
+      @media (max-width: 767px) {
+        .services ul li h2.mobile-title {
+          display: block; } }
+      .services ul li h2.mobile-title a {
+        color: #ffffff; }
     .services ul li div.info {
       padding: 274px 44px 0;
       position: absolute;
@@ -11504,21 +11518,34 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
               height: 2px; } }
         .services ul li div.info a:hover:after {
           width: 100%; }
-    .services ul li img {
+    .services ul li > img {
       position: relative; }
       @media (max-width: 1440px) {
-        .services ul li img {
+        .services ul li > img {
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); } }
       @media (max-width: 991px) {
-        .services ul li img {
+        .services ul li > img {
           height: 229px; } }
       @media (max-width: 767px) {
-        .services ul li img {
+        .services ul li > img {
           height: auto;
-          width: 100%; } }
+          width: 100%;
+          display: none; } }
+    .services ul li .mobile-link {
+      display: none; }
+      @media (max-width: 767px) {
+        .services ul li .mobile-link {
+          display: block;
+          position: relative;
+          z-index: 9; }
+          .services ul li .mobile-link:hover {
+            color: #ffffff; }
+          .services ul li .mobile-link img {
+            width: 100%;
+            display: block; } }
 
 .advantages {
   padding-top: 59px; }
@@ -11904,6 +11931,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .partners ul li {
     text-align: center;
     padding-bottom: 80px; }
+    @media (max-width: 767px) {
+      .partners ul li {
+        padding-bottom: 0; } }
     .partners ul li a {
       text-align: center;
       display: inline-block;
@@ -11954,6 +11984,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .partners .owl-carousel .owl-stage .owl-item a:hover img {
         -webkit-filter: grayscale(0);
         filter: grayscale(0); }
+    @media (max-width: 767px) {
+      .partners .owl-carousel .owl-stage .owl-item a img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0); } }
 
 .contacts ul {
   display: -webkit-box;
@@ -12438,7 +12472,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     @media (max-width: 480px) {
       .app .wr-intro {
         padding: 26px 0 144px; } }
-    @media (max-height: 768px) {
+    @media (max-height: 768px) and (min-width: 1300px) {
       .app .wr-intro {
         padding: 128px 0 190px; } }
   .app .wr-services {

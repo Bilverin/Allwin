@@ -84,7 +84,7 @@
 			@include respond-to(xs) {
 				padding: 26px 0 144px;
 			}
-			@media (max-height: 768px) {padding: 128px 0 190px;}
+			@media (max-height: 768px) and (min-width: 1300px) {padding: 128px 0 190px;}
 		}
 
 		&-services {
