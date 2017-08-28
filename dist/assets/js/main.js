@@ -148,7 +148,8 @@ $(document).ready(function() {
 				} else if (direction === 'right' && currentItem > 0) {
 					goToItem(currentItem - 1);
 				}
-			}
+			},
+			allowPageScroll: 'vertical'
 		});
 
 	})(window); // END OF UNIT: Testimonials
