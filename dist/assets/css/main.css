@@ -11374,9 +11374,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     overflow: hidden; }
     .services ul li:hover h2 {
       color: #343434; }
+      .services ul li:hover h2 a {
+        color: #343434; }
     .services ul li:hover div.info:after {
       left: 0%; }
-    .services ul li:hover div.info p, .services ul li:hover div.info a {
+    .services ul li:hover div.info p, .services ul li:hover div.info span {
       -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
       transform: translateX(0);
@@ -11400,6 +11402,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       z-index: 10;
       -webkit-transition: color 0.4s ease-out;
       transition: color 0.4s ease-out; }
+      .services ul li h2 a {
+        color: #ffffff;
+        -webkit-transition: color 0.4s ease-out;
+        transition: color 0.4s ease-out; }
       @media (max-width: 991px) {
         .services ul li h2 {
           font-size: 16px;
@@ -11420,8 +11426,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       @media (max-width: 767px) {
         .services ul li h2.mobile-title {
           display: block; } }
-      .services ul li h2.mobile-title a {
-        color: #ffffff; }
     .services ul li div.info {
       padding: 274px 44px 0;
       position: absolute;
@@ -11454,7 +11458,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         background: rgba(255, 255, 255, 0.8);
         -webkit-transition: left 0.6s ease-out;
         transition: left 0.6s ease-out; }
-      .services ul li div.info p, .services ul li div.info a {
+      .services ul li div.info p, .services ul li div.info span {
         opacity: 0;
         position: relative;
         z-index: 2;
@@ -11485,7 +11489,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           @media (max-width: 480px) {
             .services ul li div.info p.mobile {
               display: block; } }
-      .services ul li div.info a {
+      .services ul li div.info span {
         color: #343434;
         font-family: "AkzidenzGroteskPro-MdEx", sans-serif;
         font-size: 20px;
@@ -11496,10 +11500,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         display: inline-block;
         position: relative; }
         @media (max-width: 991px) {
-          .services ul li div.info a {
+          .services ul li div.info span {
             font-size: 16px;
             line-height: 24px; } }
-        .services ul li div.info a:after {
+        .services ul li div.info span:after {
           content: '';
           display: block;
           width: 0%;
@@ -11514,9 +11518,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out; }
           @media (max-width: 767px) {
-            .services ul li div.info a:after {
+            .services ul li div.info span:after {
               height: 2px; } }
-        .services ul li div.info a:hover:after {
+        .services ul li div.info span:hover:after {
           width: 100%; }
     .services ul li > img {
       position: relative; }
